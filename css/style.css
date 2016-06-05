@@ -1,0 +1,65 @@
+
+#top-space {
+	padding-top: 100px;
+}
+
+#main-container {
+	background-color: gray;
+	background-size: 125%;
+	margin-left:25%;
+	margin-right: 25%;
+}
+/*Google Address Autocomplete*/
+
+#address-container {
+	margin-left:25%;
+	margin-right: 25%
+}
+
+#row-0 {
+	padding-top: 20px;
+}
+
+#row-2 {
+	padding-bottom: 20px;
+}
+
+#locationField, #controls {
+  position: relative;
+  width: 480px;
+  padding-bottom: 75px;
+}
+#autocomplete {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 99%;
+}
+.label {
+  text-align: right;
+  font-weight: bold;
+  width: 100px;
+  color: #303030;
+}
+#address {
+  border: 1px solid #000090;
+  background-color: #f0f0ff;
+  width: 480px;
+  padding-right: 2px;
+}
+#address td {
+  font-size: 10pt;
+}
+.field {
+  width: 99%;
+}
+.slimField {
+  width: 80px;
+}
+.wideField {
+  width: 200px;
+}
+#locationField {
+  height: 20px;
+  margin-bottom: 2px;
+}

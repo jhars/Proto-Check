@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+	<div class="container" id="address-container">
+
+		<div class="row">
+			<div id="locationField">
+			  <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+			</div>
+		</div>
+
+		<div class="row">
+			<table id="address">
+			  <!-- <tr> -->
+			    <!-- <td class="label">Street address</td> -->
+			    <!-- <td class="slimField"> -->
+			    	<input class="field" id="street_number" disabled="true">
+			    	</input>
+			    <!-- </td> -->
+			    <!-- <td class="wideField" colspan="2"> -->
+			    	<input class="field" id="route" disabled="true">
+			    	</input>
+			    <!-- </td> -->
+			  <!-- </tr> -->
+<!-- 			  <tr>
+			    <td class="label">City</td>
+			    <td class="wideField" colspan="3"> -->
+			    	<input class="field" id="locality" disabled="true"></input>
+<!-- 			    </td>
+			  </tr> -->
+			  <tr>
+			    <td class="label">State</td>
+			    <td class="slimField"><input class="field"
+			          id="administrative_area_level_1" disabled="true"></input></td>
+			    <td class="label">Zip code</td>
+			    <td class="wideField"><input class="field" id="postal_code" disabled="true"></input></td>
+			  </tr>
+			  <tr>
+			    <td class="label">Country</td>
+			    <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"></input></td>
+			  </tr>
+			</table>
+		</div> <!-- ROW (END) -->
+
+	</div> <!-- CONTAINER (END) -->
+
+
+
+<div class="container" id="main-container">
+		<form>
+	    <!--First row-->
+	    <div class="row">
+	      <!--First column-->
+	      <div class="col-md-6">
+	          <div class="md-form">
+	              <!-- <i class="fa fa-envelope prefix"></i> -->
+	              <input type="email" id="form81" class="form-control validate">
+	              <label for="form81" data-error="wrong" data-success="right">Type your email</label>
+	          </div>
+	      </div>
+	       <!--Second column-->
+	      <div class="col-md-6">
+	        <div class="md-form">
+	          <!-- <i class="fa fa-lock prefix"></i> -->
+	          <input type="password" id="form82" class="form-control validate">
+	          <label for="form82" data-error="wrong" data-success="right">Type your password</label>
+	        </div>
+	      </div>
+		   </div>
+		    <!--/.First row-->
+
+		    <!--Second row-->
+		    <div class="row">
+	        <!--First column-->
+	        <div class="col-md-12">
+	          <div class="md-form">
+	            <textarea type="text" id="form76" class="md-textarea"></textarea>
+	            <label for="form76">Basic textarea</label>
+	          </div>
+	        </div>
+		    </div>
+		    <!--/.Second row-->
+
+		    <!--Third row-->
+		    <div class="row">
+
+	        <!--First column-->
+	        <div class="col-md-4">
+	          <div class="md-form">
+	            <input type="text" id="form41" class="form-control">
+	            <label for="form41" class="">Example label</label>
+	          </div>
+	        </div>
+
+	        <!--Second column-->
+	        <div class="col-md-4">
+	          <div class="md-form">
+	            <input type="text" id="form51" class="form-control">
+	            <label for="form51" class="">Example label</label>
+	          </div>
+	        </div>
+
+	        <!--Third column-->
+	        <div class="col-md-4">
+	          <div class="md-form">
+	            <input type="text" id="form61" class="form-control">
+	            <label for="form61" class="">Example label</label>
+	          </div>
+	        </div>
+
+		    </div>
+		    <!--/.Third row-->
+		</form>
+</div>
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
+</body>

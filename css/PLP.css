@@ -1,0 +1,22 @@
+#item-container {
+	position: relative;
+	width:82%;
+	margin-left:185px;
+	margin-top:-1850px;
+}
+
+#black-dress-atc {
+	z-index: 1;
+}
+
+#black-dress {
+	z-index: 0;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

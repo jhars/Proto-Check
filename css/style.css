@@ -1,19 +1,33 @@
+body {
+  background-color: #f6f6f6;
+}
+
 
 #top-space {
 	padding-top: 100px;
 }
 
 #main-container {
-	background-color: gray;
+  position: relative;
+	background-color: white;
 	background-size: 125%;
-	margin-left:25%;
-	margin-right: 25%;
+	margin-left:150px;
+  margin-right:450px;
 }
 /*Google Address Autocomplete*/
 
 #address-container {
-	margin-left:25%;
-	margin-right: 25%
+  background-color: white;
+	position: fixed;
+  right: 0px;
+  width: 225px;
+  border: 1px solid gray;
+  padding: 175px;
+  margin-right:50px;
+}
+
+label {
+  font-size: 200px;
 }
 
 #row-0 {

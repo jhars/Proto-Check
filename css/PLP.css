@@ -4,19 +4,11 @@
 	margin-left:185px;
 	margin-top:-1850px;
 }
-
-#black-dress-atc {
+#atc-dress {
+	position: absolute;
 	z-index: 1;
 }
-
-#black-dress {
+#dress {
+	position: absolute;
 	z-index: 0;
-}
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
 }

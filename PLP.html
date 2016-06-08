@@ -25,22 +25,28 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">Modal title</h4>
+		        <h4 class="modal-title">Item added to My Cart (3 Items)</h4>
 		      </div>
 		      <div class="modal-body">
 			      <div class="container">
-			      	<div class="row">
+			      	<div class="top-poppup-row">
 				      	<div class="col-xs-6">
 				      		<canvas id="dress-popup" width="137" height="183"></canvas>
 				      	</div>
 			      		
-			      		<div class="col-xs-6">
-			      			<canvas id="btn-checkout" width="448" height="75"></canvas>
-			      			<canvas id="btn-continue" width="448" height="75"></canvas>
+			      		<div class="col-xs-6" id="checkout-continue-row">
+			      			<div class="row">
+			      				<a href="index.html"><canvas id="btn-checkout" width="316" height="56" href="index.html"></canvas></a>
+			      			</div>
+			      			<div class="row">
+			      				<a><canvas id="btn-continue" width="316" height="56" data-dismiss="modal"></canvas></a>
+			      			</div>
+			      			
 			      		</div>
 			      	</div>
 			      </div>
-		        <div class="container-fluid">
+			      <br><hr>
+		        <div class="container-fluid" id="also-like-row">
 		        	<canvas id="you-may-also-like" width="827" height="319"></canvas>
 		        </div>
 		      </div>

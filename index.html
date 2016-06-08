@@ -16,131 +16,95 @@
 </head>
 <body>
 
-  <div class="container"><!-- CONTAINER- - -  -->
-    <div class="row">
-      <div class="col-sm-12" id="top-space">
+	<div class="container" id="address-container">
+	</div> <!-- CONTAINER (END) -->
+
+
+
+	<div class="container" id="main-container">
+
+<!--   <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+  </div> -->
+
+		<div class="row" id="address-search">
+			<div class="col-md-12">
+				<div class="md-form" id="locationField">
+				  <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" id="row-0">
+			<!-- <form class="form-inline"> -->
+
+				<div class="col-md-3">
+				  <div class="md-form">
+				    <input type="text" id="street_number" class="form-control">
+				    <label for="steet_number" id="street_number-lbl" class="">Street #</label>
+				  </div>
+				</div>
+
+				<div class="col-md-7">
+				  <div class="md-form">
+				    <input type="text" id="route" class="form-control">
+				    <label for="route" id="route-lbl" class="">Street Name</label>
+				  </div>
+				</div>
+
+				<div class="col-md-2">
+				  <div class="md-form">
+				    <input type="text" id="sublocality" class="form-control">
+				    <label for="sublocality" class="" id="sublocality-lbl">Unit #</label>
+				  </div>
+				</div>
+
+			<!-- </form> -->
+		</div>
+
+    <div class="row" id="row-1">
+
+    <div class="col-md-5">
+      <div class="md-form">
+        <input type="text" id="locality" class="form-control">
+        <label for="locality" id="locality-lbl">City</label>
       </div>
     </div>
-  </div><!-- - - - -END CONTAINER-  - - - -  -->
 
-  <div class="container"><!-- - - - - - CONTAINER- - - - - - - -  -->
-  <!-- ################################################################ -->
-    <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6"> <!-- MIDDLE -->
-        <div class="row"> <!-- ROW -->
-
-          <div class="col-xs-6">
-            <div class="md-form">
-              <input type="text" id="form1" class="form-control">
-              <label for="form1" class="">First Name</label>
-            </div>
-          </div>
-
-          <div class="col-xs-6">
-            <div class="md-form">
-              <input type="text" id="form2" class="form-control">
-              <label for="form2" class="">Last Name</label>
-            </div>
-          </div>
-
-        </div> <!-- ROW (END) -->
-      </div> <!-- MIDDLE (END) -->
-      <div class="col-sm-3"></div>
-    </div>
-<!-- ################################################################ -->
-      <div class="row">
-        <div class="col-sm-3"></div>
-
-        <div class="col-sm-6">
-          <div class="md-form">
-            <input type="text" id="form3" class="form-control">
-            <label for="form3" class="">Address</label>
-          </div>
-        </div>
-
-        <div class="col-sm-3"></div>
-      </div>
-<!-- ################################################################ -->
-      <div class="row">
-      <div class="col-sm-3"></div>
-
-      <div class="col-sm-6">
+      <div class="col-md-3">
         <div class="md-form">
-          <input type="text" id="form4" class="form-control">
-          <label for="form4" class="">Apt/Unit</label>
+          <input type="text" id="administrative_area_level_1" class="form-control">
+          <label for="administrative_area_level_1" class="" id="administrative_area_level_1-lbl">State</label>
         </div>
       </div>
-
-        <div class="col-sm-3"></div>
-      </div>
-<!-- ################################################################ -->
-<!--       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-
-          <div class="col-xs-6">
-            <div class="md-form">
-              <input type="text" id="form5" class="form-control">
-              <label for="form5" class="">City</label>
-            </div>
-          </div>
-
-          <div class="col-xs-2">
-            <div class="md-form">
-              <input type="text" id="form6" class="form-control">
-              <label for="form6" class="">State</label>
-            </div>
-          </div>
-
-          <div class="col-xs-4">
-            <div class="md-form">
-              <input type="text" id="form7" class="form-control">
-              <label for="form7" class="">Zip</label>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-sm-3"></div>
-      </div> -->
-
-
-      <form class="form-inline">
-
-          <div class="md-form form-group">
-              <!-- <i class="fa fa-envelope prefix"></i> -->
-              <input type="email" id="form91" class="form-control validate">
-              <label for="form91" data-error="wrong" data-success="right">Type your email</label>
-          </div>
-
-          <div class="md-form form-group">
-              <!-- <i class="fa fa-lock prefix"></i> -->
-              <input type="city" id="form92" class="form-control validate">
-              <label for="form92" data-error="wrong" data-success="right">Type your password</label>
-          </div>
-
-          <div class="md-form form-group">
-              <a href="" class="btn btn-primary btn-lg">Login</a>
-          </div>
-
-      </form>
-
-<!-- ################################################################ -->
-    </div><!-- - - - - - - -END- CONTAINER - - - - - - - - - - - -  -->
-
-
 
     </div>
-  </div>
 
+    <div class="row" id="row-2">
 
+	    <div class="col-md-5">
+	      <div class="md-form">
+	        <input type="text" id="postal_code" class="form-control">
+	        <label for="postal_code" class="" id="postal_code-lbl">Zip</label>
+	      </div>
+	    </div>
 
+    	<div class="col-md-7">
+    	  <div class="md-form">
+    	    <input type="text" id="country" class="form-control">
+    	    <label for="country" class="" id="country-lbl">Country</label>
+    	  </div>
+    	</div>
+    </div>
+
+</div>
 
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/tether.min.js"></script>
@@ -150,8 +114,7 @@
 
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
+	<script type="text/javascript" src="js/autocomplete.js"></script>
 
 </body>
-
-</html>

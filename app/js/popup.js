@@ -12,7 +12,7 @@ var ctxBtnContinue = btnContinue.getContext('2d');
 
 $(window).load(function(){
   console.log('load');
-  	loadPopupImages(sources, function(images) {
+  	loadPopupImages(sourcesPopup, function(images) {
 		ctxYMAL.drawImage(imagesPopup.you_may_also_like, 0,0,827,319);
 		ctxDressPopup.drawImage(imagesPopup.dress_popup, 0,0,137,183);
 		ctxBtnCheckout.drawImage(imagesPopup.checkout, 0,0,316,44);
@@ -31,15 +31,15 @@ var imagesPopup = {};
 function loadPopupImages(sources, callback) {
   var loadedImages = 0;
   var numImages = 0;
-  for(var src in sourcesPopup) {
+  for(var src in sources) {
     numImages++;
-  } for (var src in sourcesPopup) {
+  } for (var src in sources) {
     imagesPopup[src] = new Image();
     imagesPopup[src].onload = function() {
       if(++loadedImages >= numImages) {
         callback(imagesPopup);
       }
     };
-    imagesPopup[src].src = sourcesPopup[src];
+    imagesPopup[src].src = sources[src];
   }
 };

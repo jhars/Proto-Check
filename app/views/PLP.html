@@ -6,19 +6,17 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>PLP</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/mdb.min.css" rel="stylesheet">
-		<link href="css/PLP.css" rel="stylesheet">
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/mdb.min.css" rel="stylesheet">
+		<link href="../css/PLP.css" rel="stylesheet">
 	</head>
 	<body onload="drawScene()">
-		<img src="img/custom/PLP_blank.jpg" alt=""> <!-- BG IMAGE -->
+		<img src="../img/PLP_blank.jpg" alt=""> <!-- BG IMAGE -->
 		<div class="container" id ="item-container">
 			<canvas id="dress" width="249" height="413" data-toggle="modal" data-target=".bd-example-modal-lg"></canvas>
 			<canvas id="blouse" width="249" height="413"></canvas>
 			<canvas id="jeans" width="249" height="413"></canvas>
 		</div>
-
-
 		<!-- Modal -->
 		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-lg">
@@ -29,19 +27,19 @@
 		      </div>
 		      <div class="modal-body">
 			      <div class="container">
-			      	<div class="top-poppup-row">
+			      	<div class="top-popup-row">
 				      	<div class="col-xs-6">
 				      		<canvas id="dress-popup" width="137" height="183"></canvas>
 				      	</div>
-			      		
+
 			      		<div class="col-xs-6" id="checkout-continue-row">
 			      			<div class="row">
-			      				<a href="index.html"><canvas id="btn-checkout" width="316" height="56" href="index.html"></canvas></a>
+			      				<a href="checkout_main.html"><canvas id="btn-checkout" width="316" height="56" href="checkout_main.html"></canvas></a>
 			      			</div>
 			      			<div class="row">
 			      				<a><canvas id="btn-continue" width="316" height="56" data-dismiss="modal"></canvas></a>
 			      			</div>
-			      			
+
 			      		</div>
 			      	</div>
 			      </div>
@@ -51,19 +49,18 @@
 		        </div>
 		      </div>
 		      <div class="modal-footer">
-		        
+
 		      </div>
 		    </div>
 		  </div>
 		</div>
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/tether.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="../../js/tether.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/mdb.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
-	<script type="text/javascript" src="js/PLP.js"></script>
-	<script type="text/javascript" src="js/addToCart.js"></script>
-	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript" src="../js/addToCart.js"></script>
+	<script type="text/javascript" src="../js/popup.js"></script>
   </body>
 </html>

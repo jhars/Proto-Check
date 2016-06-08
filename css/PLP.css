@@ -1,14 +1,11 @@
 #item-container {
-	position: relative;
-	width:82%;
-	margin-left:185px;
+	/*position: relative;*/
+	/*width:82%;*/
+	/*margin-left:185px;*/
 	margin-top:-1850px;
 }
-#atc-dress {
-	position: absolute;
-	z-index: 1;
-}
-#dress {
-	position: absolute;
-	z-index: 0;
+
+#gridSystemModal {
+	margin-left: 100px;
+	margin-right: 100px;
 }

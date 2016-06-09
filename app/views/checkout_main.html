@@ -11,10 +11,11 @@
 	</head>
 	<body>
 		<img src="../img/bg-checkout.jpg" alt=""> <!-- BG IMAGE -->
-		<div class="container-fluid" id ="checkout-container"> <!-- [[[START CONTAINER]]] -->
-
-			<div class="row" id="shopping-order"> <!-- ======TOP-ROW -->
-				<div class="col-sm-7">
+	<!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[[START CONTAINER]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+		<div class="container-fluid" id ="checkout-container"> 
+			<!-- """"""""""""""""""TOP-ROW"""""""""""""""""" -->
+			<div class="row" id="shopping-order">
+				<div class="col-sm-7"> <!-- [[[[[START LEFT COLUMN -->
 					<p>Shopping Cart</p><hr>
 
 					<div class="row">
@@ -27,22 +28,24 @@
 						<p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
 					</div>
 
-				</div> <!-- END LEFT COLUMN -->
+				</div> <!-- <<<< END LEFT COLUMN <<< -->
+				<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START RIGHT COLUMN >>>>>>>> -->
 				<div class="col-sm-5">
 					<p>Order Summary</p><hr>
-					<input class="address1 required" data-errormessage="This field is required and may only contain the letters A-Z and numbers" id="address1" maxlength="128" name="address1" pattern="^[\x00-\x21\x23-\x7F]*$" required="" title="This field may only contain the letters A-Z and numbers" type="text">
+						<form action="demo_form.asp">
+						  <input type="text" name="address" size="35" value="Promo Code"><br>
+						</form>
 				</div>
-
-			</div> <!-- =================================END TOP-ROW -->
-
+			</div> <!--""""""""""""""""END TOP-ROW"""""""""""""""" -->
+<!-- [{{{{{{{{{{{{{{{{{{{{{{{{{{{{{RECENTLY REMOVED}}}}}}}}}}}}}}}}}}}}}}}}}}}}}] -->
 			<div class="row" id="recently-row">
 				<div class="col-sm-7">
 					<p>Recently Removed from Cart</p><hr>
 					<canvas id="recently-removed" width="650" height="333"></canvas>
 				</div>
+			
 			</div>
-
-		</div> <!-- [[[[[[[[[[[[[[[ [[[[[[[[[[END CONTAINER]]]]]]]]]] ]]]]]]]]]]]]]]]  -->
+		</div> <!-- [[[[[[[[[[[[[[[ [[[[[[[[[[ END CONTAINER ]]]]]]]]]] ]]]]]]]]]]]]]]]  -->
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript" src="../../js/bootstrap.min.js"></script>

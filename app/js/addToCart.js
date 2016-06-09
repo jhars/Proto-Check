@@ -15,9 +15,9 @@ var sources = {
 $(window).load(function(){
   console.log('load');
   	loadImages(sources, function(images) {
-		  ctxDress.drawImage(images.dress, 0, 0, 249, 413);
-		  ctxBlouse.drawImage(images.blouse, 25, 0, 249, 413);
-		  ctxJeans.drawImage(images.jeans, 25, 0, 249, 413);
+			ctxDress.drawImage(images.dress, 0, 0, 249, 413);
+			ctxBlouse.drawImage(images.blouse, 25, 0, 249, 413);
+			ctxJeans.drawImage(images.jeans, 25, 0, 249, 413);
 	});
 });
 

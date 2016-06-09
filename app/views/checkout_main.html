@@ -7,40 +7,45 @@
 		<title>Checkout-Main</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 		<link href="../../css/bootstrap.min.css" rel="stylesheet">
-		<link href="../../css/mdb.min.css" rel="stylesheet">
 		<link href="../css/checkout_main.css" rel="stylesheet">
 	</head>
 	<body>
 		<img src="../img/bg-checkout.jpg" alt=""> <!-- BG IMAGE -->
-		<div class="container-fluid" id ="checkout-container">
-			<div class="row" id="shopping-order">
+		<div class="container-fluid" id ="checkout-container"> <!-- [[[START CONTAINER]]] -->
+
+			<div class="row" id="shopping-order"> <!-- ======TOP-ROW -->
 				<div class="col-sm-7">
 					<p>Shopping Cart</p><hr>
+
 					<div class="row">
 						<canvas id="dress-thumbnail" width="120" height="160"></canvas>
 						<p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
 					</div>
+
 					<div class="row">
 						<canvas id="blouse-thumbnail" width="120" height="160"></canvas>
 						<p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
 					</div>
-				</div>
+
+				</div> <!-- END LEFT COLUMN -->
 				<div class="col-sm-5">
 					<p>Order Summary</p><hr>
+					<input class="address1 required" data-errormessage="This field is required and may only contain the letters A-Z and numbers" id="address1" maxlength="128" name="address1" pattern="^[\x00-\x21\x23-\x7F]*$" required="" title="This field may only contain the letters A-Z and numbers" type="text">
 				</div>
-			</div>
+
+			</div> <!-- =================================END TOP-ROW -->
+
 			<div class="row" id="recently-row">
 				<div class="col-sm-7">
 					<p>Recently Removed from Cart</p><hr>
 					<canvas id="recently-removed" width="650" height="333"></canvas>
 				</div>
 			</div>
-		</div>
+
+		</div> <!-- [[[[[[[[[[[[[[[ [[[[[[[[[[END CONTAINER]]]]]]]]]] ]]]]]]]]]]]]]]]  -->
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script type="text/javascript" src="../../js/tether.min.js"></script>
   <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../js/mdb.min.js"></script>
 	<script type="text/javascript" src="../js/checkout_main.js"></script>
   </body>
 </html>

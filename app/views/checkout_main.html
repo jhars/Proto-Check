@@ -11,41 +11,51 @@
 	</head>
 	<body>
 		<img src="../img/bg-checkout.jpg" alt=""> <!-- BG IMAGE -->
-	<!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[[START CONTAINER]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+<!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[[START CONTAINER]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
 		<div class="container-fluid" id ="checkout-container"> 
 			<!-- """"""""""""""""""TOP-ROW"""""""""""""""""" -->
 			<div class="row" id="shopping-order">
-				<div class="col-sm-7"> <!-- [[[[[START LEFT COLUMN -->
+				<div class="col-sm-8"> <!-- [[[[[START LEFT COLUMN -->
 					<p>Shopping Cart</p><hr>
-
 					<div class="row">
 						<canvas id="dress-thumbnail" width="120" height="160"></canvas>
 						<p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
 					</div>
-
 					<div class="row">
 						<canvas id="blouse-thumbnail" width="120" height="160"></canvas>
 						<p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
 					</div>
-
+					<div class="row" id="recently-row"><!-- {{{{{{{{{{{{{{{{{{RECENTLY REMOVED}}}}}}}}}}}}}}}}}}}}} -->
+						<div class="col-sm-12">
+							<p>Recently Removed from Cart</p><hr>
+							<canvas id="recently-removed" width="650" height="333"></canvas>
+						</div>
+					</div>  <!-- {{{{{{{{{{{{{{{{{{{{{ END RECENTLY REMOVED }}}}}}}}}}}}}}}}}}}}} -->
 				</div> <!-- <<<< END LEFT COLUMN <<< -->
 				<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START RIGHT COLUMN >>>>>>>> -->
-				<div class="col-sm-5">
-					<p>Order Summary</p><hr>
-						<form action="demo_form.asp">
-						  <input type="text" name="address" size="35" value="Promo Code"><br>
-						</form>
+				<div class="col-xs-4">
+				  <p>Order Summary</p><hr>
+				  <form>
+				    <input type="text" name="address" value="Promo Code"><br>
+				  </form>
+				    <p>Subtotal:</p>
+				    <p>Discount:</p>
+				    <p>Tax:</p>
+				    <p>Shipping:</p>
+				    <p>Credit:</p><hr>
+				    <p>Total:</p>
+				  <div id="payment-options" class="col-sm-12">
+				    <a href="cc_details.html"><canvas id="checkout-btn" width="316" height="44"></canvas></a>
+				    <img id="cc-images" src="../img/payment_buttons/CC_images.png">
+				    <img id="pay-pal-btn" src="../img/payment_buttons/pay_pal_chkout.png"><br>
+				    <img id="amazon-btn" src="../img/payment_buttons/pay_with_amazon.png"><br>
+				  </div>
 				</div>
+
+				
+				</div> <!-- $$$$$$$$$$$$$$$$$$$$$ END ORDER SUMMARY $$$$$ -->
 			</div> <!--""""""""""""""""END TOP-ROW"""""""""""""""" -->
-<!-- [{{{{{{{{{{{{{{{{{{{{{{{{{{{{{RECENTLY REMOVED}}}}}}}}}}}}}}}}}}}}}}}}}}}}}] -->
-			<div class="row" id="recently-row">
-				<div class="col-sm-7">
-					<p>Recently Removed from Cart</p><hr>
-					<canvas id="recently-removed" width="650" height="333"></canvas>
-				</div>
-			
-			</div>
-		</div> <!-- [[[[[[[[[[[[[[[ [[[[[[[[[[ END CONTAINER ]]]]]]]]]] ]]]]]]]]]]]]]]]  -->
+<!-- [[[[[[[[[[[[[[[ [[[[[[[[[[ END CONTAINER ]]]]]]]]]] ]]]]]]]]]]]]]]]  -->
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript" src="../../js/bootstrap.min.js"></script>

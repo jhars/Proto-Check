@@ -8,11 +8,9 @@
 
 var placeSearch, autocomplete;
 var componentForm = {
-  street_number: 'short_name',
-  route: 'long_name',
+  // route: 'long_name',
   locality: 'long_name',
   administrative_area_level_1: 'short_name',
-  country: 'long_name',
   postal_code: 'short_name',
   sublocality: 'long_name'
 };
@@ -47,14 +45,6 @@ function fillInAddress() {
       document.getElementById(addressType).value = val;
     }
   }
-  document.getElementById('street_number-lbl').style.display = "none"
-  document.getElementById('route-lbl').style.display = "none"
-  document.getElementById('locality-lbl').style.display = "none"
-  document.getElementById('administrative_area_level_1-lbl').style.display = "none"
-  document.getElementById('country-lbl').style.display = "none"
-  document.getElementById('postal_code-lbl').style.display = "none"
-
-  // document.getElementById('sublocality-lbl').style.display = "none"
 }
 
 // Bias the autocomplete object to the user's geographical location,
@@ -75,27 +65,16 @@ function geolocate() {
   }
 }
 
-// document.getElementById("street_number").addEventListener("click", displayStreetNumber);
-document.getElementById("street_number").addEventListener("click", function(){
-	document.getElementById("street_number-lbl").style.display = '';
-});
-
-document.getElementById("route").addEventListener("click", function(){
-	document.getElementById("route-lbl").style.display = '';
-});
-document.getElementById("locality").addEventListener("click", function(){
-	document.getElementById("locality-lbl").style.display = '';
-});
-document.getElementById("sublocality").addEventListener("click", function(){
-	document.getElementById("sublocality-lbl").style.display = '';
-});
-document.getElementById("administrative_area_level_1").addEventListener("click", function(){
-	document.getElementById("administrative_area_level_1-lbl").style.display = '';
-});
-document.getElementById("country").addEventListener("click", function(){
-	document.getElementById("country-lbl").style.display = '';
-});
-document.getElementById("postal_code").addEventListener("click", function(){
-	document.getElementById("postal_code-lbl").style.display = '';
-});
+// document.getElementById("locality").addEventListener("click", function(){
+// 	document.getElementById("locality-lbl").style.display = '';
+// });
+// document.getElementById("sublocality").addEventListener("click", function(){
+// 	document.getElementById("sublocality-lbl").style.display = '';
+// });
+// document.getElementById("administrative_area_level_1").addEventListener("click", function(){
+// 	document.getElementById("administrative_area_level_1-lbl").style.display = '';
+// });
+// document.getElementById("postal_code").addEventListener("click", function(){
+// 	document.getElementById("postal_code-lbl").style.display = '';
+// });
 

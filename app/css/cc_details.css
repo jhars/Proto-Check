@@ -1,0 +1,18 @@
+label {
+  font-size: 12px;
+}
+.full-width {
+  width: 100%;
+}
+.name {
+  width:100%;
+}
+#postal_code {
+  width:100%
+}
+#locality {
+  width:100%
+}
+#administrative_area_level_1 {
+  width:100%
+}

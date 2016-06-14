@@ -16,3 +16,181 @@ label {
 #administrative_area_level_1 {
   width:100%
 }
+.outer-shipping {
+  border: solid #e0e0e0;
+  width: 85%;
+  border-collapse: separate;
+  border-spacing: 25px;
+  margin-top: 10px;
+}
+
+.section-title {
+  border: solid #e0e0e0;
+  border-width: 0 0 2px 0;
+  padding-bottom:10px;
+}
+
+.shipping-input {
+  margin-bottom: 10px;
+}
+
+#shipping-form {
+  padding-top: 5px;
+}
+
+#shipping-info {
+  font-size: 14;
+}
+
+#cc-input-helper {
+  font-size: 12;
+}
+
+#cc-types {
+  padding-left: 10px;
+}
+
+#promo-input {
+  width:100%;
+}
+table {
+  width:100%;
+}
+th, td {
+  padding: 5px;
+}
+td.amount {
+  text-align: right;
+}
+#dress-details {
+  font-size:12px;
+  margin-top:-75px;
+  margin-left: 72px;
+  margin-bottom:25px;
+}
+
+#blouse-details {
+  font-size:12px;
+  margin-top:-75px;
+  margin-left: 72px;
+}
+#total-row {
+  border-bottom: solid #fff;
+}
+#place-order {
+  padding-top: 15px;
+}
+
+
+/********** RADIO BUTTOONS *********/
+.control-group {
+  display: inline-block;
+  width: 111%;
+  background: #fff;
+  margin-left: 15px;
+}
+.control {
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #e6e6e6;
+  border: solid #8fd0b3
+  border-width: 2px 2px 2px 2px;
+}
+
+#save-secure {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #e6e6e6;
+  border: solid #fff;
+  border-width: 2px 2px 2px 2px;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 75%;
+  background: #8fd0b3;
+}
+
+/************ CHECKBOX *************/
+
+/* Check mark */
+.control__indicator:after {
+  position: relative;
+  display: none;
+  content: '';
+}
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  /*background: #ccc;*/
+  border: solid #8fd0b3;
+  border-width: 2px 2px 2px 2px;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+  background: white;
+  border: solid #8fd0b3;
+  border-width: 2px 2px 2px 2px;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+  border: solid #8fd0b3;
+  /*border-width: 2px 2px 2px 2px;*/
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+  top: 4px;
+  left: 8px;
+  width: 3px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: solid #8fd0b3;
+  border-width: 0 2px 2px 0;
+}
+
+.check-radio {
+  background: #fcfff4;
+  box-shadow: inset 0px 1px 1px #8fd0b3, 0px 1px 3px rgba(143,208,179,1.0);
+}
+.control--checkbox {
+  margin-left: -15px;
+}
+
+

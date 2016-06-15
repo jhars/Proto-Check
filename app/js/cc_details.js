@@ -1,6 +1,5 @@
 var dress = document.getElementById('dress-thumbnail');
 var blouse = document.getElementById('blouse-thumbnail');
-var placeOrder = document.getElementById('place-order');
 
 var ctxDress = dress.getContext('2d');
 var ctxBlouse = blouse.getContext('2d');

@@ -82,6 +82,23 @@ td.amount {
 }
 
 
+
+#shipping-options {
+  position: relative;
+  top: -250px;
+}
+
+#payment-info {
+  position: relative;
+  top: -250px;
+}
+
+#error-label {
+  color: red;
+  font-size: 50;
+}
+
+/************************************/
 /********** RADIO BUTTOONS *********/
 .control-group {
   display: inline-block;

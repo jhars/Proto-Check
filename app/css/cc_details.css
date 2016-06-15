@@ -95,7 +95,15 @@ td.amount {
 
 #error-label {
   color: red;
-  font-size: 50;
+  font-size: 24;
+}
+#error-msg-top {
+  color: red;
+  font-size: 12;
+}
+#error-msg-top-subheader {
+  color: red;
+  font-size: 12;
 }
 #administrative_area_level_1 {
   background-color: white;

@@ -4,7 +4,7 @@ $(document).ready(function () {
     return (value === "4");
   }, "Please enter valid credit card number");
 
-  $('#main-form').validate({ // initialize the plugin
+  $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
       promo_field: {
@@ -44,8 +44,9 @@ $(document).ready(function () {
     errorPlacement: function(error, element) {
       console.log(error);
       console.log(element);
-      $('#error-msg-top').html(error);
-      $('#error-label').html("Type something else diphshit");
+      $('#error-msg-top').html("THERE IS A PROBLEM WITH YOUR ORDER");
+      $('#error-msg-top-subheader').html(" Looks like there’s a problem with some payment information");
+      $('#error-label').html(error);
      }
   });
 

@@ -18,7 +18,10 @@ $(document).ready(function () {
       }
     },
     errorPlacement: function(error, element) {      
-         $('#error-label').html(error);
+      $('#error-label').html(error);
+     },
+     submitHandler: function(form) {
+      window.location = "checkout.html";
      }
   });
 

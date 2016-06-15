@@ -97,8 +97,20 @@ td.amount {
   color: red;
   font-size: 50;
 }
+#administrative_area_level_1 {
+  background-color: white;
+}
+.btn {
+  background-color: white;
+  border: 2px solid #e0e0e0; 
+  height:34px;
+  margin-top:-2px;
+  padding-right: 8px;
+}
 
-/************************************/
+/************************************************************************/
+/************************************************************************/
+/************************************************************************/
 /********** RADIO BUTTOONS *********/
 .control-group {
   display: inline-block;

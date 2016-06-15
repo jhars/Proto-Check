@@ -1,0 +1,255 @@
+<!DOCTYPE html5>
+<html5 lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Google-Address-API</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/cc_details.css" rel="stylesheet">
+</head>
+<body>
+  <img src="../img/thredUP_top.jpg"><br><br>
+  <div class="container" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
+    <!-- <div class="row"> -->
+      <span id="error-msg-top" ></span>
+
+    <!-- </div> -->
+    <!-- ********* ******** ************ ********* ********-->  
+    <!-- ********* ********  MASTER ROW   ******** ******** -->  
+
+    <div class="row" id="master-row">
+      <form id="main-form">
+    <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+      <div class="col-md-7" id="left-col">
+        <!-- ********* INPUT-FORM ******** -->
+          <h6 class="section-title">Shipping Info</h6>
+          <h7 id="shipping-info">Shipping Address</h7><br>
+
+
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="name shipping-input" placeholder="First Name" name="fname">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="name shipping-input" placeholder="Last Name" name="lname">
+              </div>
+            </div>
+
+
+            <div class="row" id="address-search">
+              <div class="col-xs-12" id="locationField">
+                <input id="autocomplete" class="full-width shipping-input" placeholder="Street Address" onFocus="geolocate()" type="text" name="address">
+              </div>
+            </div>
+
+            <div class="row" id="row-apt">
+              <div class="col-xs-12">
+                <input class="full-width shipping-input" type="text" id="sublocality" placeholder="Apt #, Floor, etc. (optional)" name="apt">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <input type="text" class= "shipping-input" id="postal_code" placeholder="Zip" name="zip_ship">
+              </div>
+              <div class="col-xs-7">
+                <input type="text" class="shipping-input" id="locality" placeholder="City" name="city">
+              </div>
+              <div class="col-xs-2">
+                <!-- <input type="select" id="administrative_area_level_1" placeholder="State" name="state"> -->
+
+
+                <div class="btn-group">
+                  <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="state-dd">State<span class="caret"></span></button>
+                    <ul class="dropdown-menu noclose">
+                      <!-- Other items -->
+                      <li value="AL">Alabama</li>
+                      <li value="AK">Alaska</li>
+                      <li value="AZ">Arizona</li>
+                      <li value="AR">Arkansas</li>
+                      <li value="CA">California</li>
+                      <li value="CO">Colorado</li>
+                      <li value="CT">Connecticut</li>
+                      <li value="DE">Delaware</li>
+                      <li value="DC">District Of Columbia</li>
+                      <li value="FL">Florida</li>
+                      <li value="GA">Georgia</li>
+                      <li value="HI">Hawaii</li>
+                      <li value="ID">Idaho</li>
+                      <li value="IL">Illinois</li>
+                      <li value="IN">Indiana</li>
+                      <li value="IA">Iowa</li>
+                      <li value="KS">Kansas</li>
+                      <li value="KY">Kentucky</li>
+                      <li value="LA">Louisiana</li>
+                      <li value="ME">Maine</li>
+                      <li value="MD">Maryland</li>
+                      <li value="MA">Massachusetts</li>
+                      <li value="MI">Michigan</li>
+                      <li value="MN">Minnesota</li>
+                      <li value="MS">Mississippi</li>
+                      <li value="MO">Missouri</li>
+                      <li value="MT">Montana</li>
+                      <li value="NE">Nebraska</li>
+                      <li value="NV">Nevada</li>
+                      <li value="NH">New Hampshire</li>
+                      <li value="NJ">New Jersey</li>
+                      <li value="NM">New Mexico</li>
+                      <li value="NY">New York</li>
+                      <li value="NC">North Carolina</li>
+                      <li value="ND">North Dakota</li>
+                      <li value="OH">Ohio</li>
+                      <li value="OK">Oklahoma</li>
+                      <li value="OR">Oregon</li>
+                      <li value="PA">Pennsylvania</li>
+                      <li value="RI">Rhode Island</li>
+                      <li value="SC">South Carolina</li>
+                      <li value="SD">South Dakota</li>
+                      <li value="TN">Tennessee</li>
+                      <li value="TX">Texas</li>
+                      <li value="UT">Utah</li>
+                      <li value="VT">Vermont</li>
+                      <li value="VA">Virginia</li>
+                      <li value="WA">Washington</li>
+                      <li value="WV">West Virginia</li>
+                      <li value="WI">Wisconsin</li>
+                      <li value="WY">Wyoming</li>
+                    </ul>
+                </div>
+
+              </div>
+            </div>
+
+          <!-- ********* SHIPPING-OPTIONS ******** -->
+            <div class="control-group">
+              <h7 id="shipping-info">Shipping Options (estimated):</h7><br>
+              <div class="outer-shipping">
+                <label class="control control--radio">Standard 3-7 Business Days<br/>Should arrive between June 10-17
+                  <input type="radio" name="radio" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+
+              <div class="outer-shipping">
+                <label class="control control--radio">Expedited Shipping 1-3 Days <br/>Should arrive between June 5-6
+                  <input class="check-radio" type="radio" name="radio"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </div><!-- ********* SHIPPING-OPTIONS (end) ******** -->
+
+        <!-- ********* PAYMENT-FORM ******** -->
+
+
+              <h6 class="section-title">Payment Info</h6>
+              <p id="cc-input-helper">Please input your credit card information(info?)
+                <img id="cc-types" src="../img/cc_types.jpg">
+              </p>
+
+              <div class="row" id="row-apt">
+                <div class="col-xs-12">
+                  <input class="full-width shipping-input" type="text" placeholder="Card Number" name="payment_details_field">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-4">
+                  <input type="text" class= "shipping-input" id="postal_code" placeholder="Expiration Date" name="exp">
+                </div>
+                <div class="col-xs-2">
+                  <input type="text" class= "shipping-input" id="locality" placeholder="CVV" name="cvv">
+                </div>
+                <div class="col-xs-6">
+                  <input type="text" id="administrative_area_level_1" placeholder="Zip Code" name="zip_pay">
+                </div>
+              </div>
+              
+              <div class="control-group">
+                <label class="control control--checkbox">Securely save the payment method for future purchases
+                  <input class="check-radio" type="checkbox"/>
+                  <div class="control__indicator check-radio"></div>
+                </label>
+              </div>
+
+              <input type="image" alt="Submit" id="checkout-btn" src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
+              <br>
+              <span id="error-label"></span>
+            
+
+            <!-- </form>********* PAYMENT-FORM (end) ******** -->
+          <!-- </form>********* INPUT-FORM (end) ******** -->
+
+
+    </div> <!-- left-col-END -->
+  
+
+  <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+  <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+      <div class="col-md-5" id="right-col">
+    <!-- ********* ORDER-SUMMARY ******** -->
+        <h6 class="section-title">Order Summary</h6>
+
+        <form id=promo-form>
+            <input id="promo-input" type="text" placeholder="Have a promo code?" name="promo_field"><br>
+        </form>
+        <table>
+          <tr>
+            <td>Subtotal:</td>
+            <td class="amount">$65.00</td>
+          </tr>
+          <tr>
+            <td>Tax:</td>
+            <td class="amount">$0.00</td>
+          </tr>
+          <tr>
+            <td>Shipping:</td>
+            <td class="amount">$0.00</td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr id="total-row">
+            <td>Total:</td>
+            <td class="amount">$65.00</td>
+          </tr>
+        </table>
+        <br><br><br>
+        <h6 class="section-title">Your Cart</h6>
+        <div class="row">
+          <div class="col-xs-12">
+            <canvas id="dress-thumbnail" width="60" height="80"></canvas>
+            <p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <canvas id="blouse-thumbnail" width="60" height="80"></canvas>
+            <p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+          </div>
+        </div><!-- ********* ORDER-SUMMARY (end) ********* -->
+      </div> <!-- right-col-END -->
+    </form> <!-- END PAGE FORM -->
+    
+
+
+    </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** --> 
+  </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
+
+        
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>    <script type="text/javascript" src="../../js/tether.min.js"></script>  <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
+    <script type="text/javascript" src="../js/autocomplete.js"></script>
+    <script type="text/javascript" src="../js/cc_details.js"></script>
+    <script type="text/javascript" src="../js/payment_validation.js"></script>
+  </body>
+</html5>

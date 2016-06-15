@@ -4,21 +4,18 @@ var placeOrder = document.getElementById('place-order');
 
 var ctxDress = dress.getContext('2d');
 var ctxBlouse = blouse.getContext('2d');
-var ctxPlaceOrder = placeOrder.getContext('2d');
 
 $(window).load(function(){
   console.log('load');
-    loadImages(sources, function(images) {
+  loadImages(sources, function(images) {
     ctxDress.drawImage(images.dress, 0,0,60,80);
     ctxBlouse.drawImage(images.blouse, 0,0,60,80);
-    ctxPlaceOrder.drawImage(images.place_order,0,0,520,50);
   });
 });
 
 var sources = {
   dress: "../img/thumb_dress.jpg",
-  blouse: "../img/thumb_blouse.jpg",
-  place_order: "../img/place_order.jpg"
+  blouse: "../img/thumb_blouse.jpg"
 };
 
 var images = {};
@@ -39,11 +36,4 @@ function loadImages(sources, callback) {
 };
 
 
-$(document).ready(function () {
-  $("#place-order").click(function () {
-    var promo = document.getElementById('promo-input').value;
-    if (promo.length == 0) {
-      alert("Please input a promo code");
-    }
-  });
-});
+

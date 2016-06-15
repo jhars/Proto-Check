@@ -24,6 +24,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 10px;
+  /*background-image: url("../img/checkout_with_credit_card_btn.png"); */
 }
 
 #cc-images {
@@ -49,4 +50,25 @@
   border: solid #e0e0e0;
   border-width: 0 0 2px 0;
   padding-bottom:10px;
+}
+
+#promo-field {
+  width:100%;
+  height:36px;
+  font-size: 18;
+  margin-bottom:10px;
+}
+
+#error-label {
+  color: red;
+}
+
+table {
+  width:100%;
+}
+th, td {
+  padding: 5px;
+}
+td.amount {
+  text-align: right;
 }

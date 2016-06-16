@@ -42,13 +42,19 @@ function loadImages(sources, callback) {
   }
 };
 
-$(document).ready(function () {
-  function popitup(url) {
-    newwindow=window.open(url,'name','height=200,width=150');
-    if (window.focus) {newwindow.focus()}
-    return false;
-  }
-});
+
+
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("", "myWindow", "width=500,height=500");
+    myWindow.document.write('<img src="../img/bg_paypal.jpg"/><div class="container"><form><input id="email" type="text" name="email" placeholder="Email"><br><input id="password" type="text" name="password" placeholder="Password"><br><input id="checkbox" type="checkbox" name="checkbox"><label></label>  <br><input id="submit" type="submit" name="submit" value="Login" onClick="closeWin()"><br><hr><button id="create-acct"></button></form</div>');
+}
+
+function closeWin() {
+    myWindow.close();
+}
+
 
 
 

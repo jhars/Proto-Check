@@ -1,3 +1,5 @@
+
+
 #item-container {
 	/*position: relative;*/
 	/*width:82%;*/
@@ -5,11 +7,24 @@
 	margin-top:-1850px;
 }
 
-#gridSystemModal {
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
 #checkout-continue-row {
 	margin-top:35px;
 }
+
+.atc-button {
+  position: relative;
+  left:100;
+  top:-15;
+  height: 16px;
+  width:85px;
+
+  border: none;
+  background-color: white;
+  background-image: url('../img/AddToCart.jpg');
+  background-repeat: no-repeat;
+}
+
+#item-row-one {
+  margin-left: 100px;
+}
+

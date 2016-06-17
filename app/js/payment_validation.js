@@ -1,5 +1,25 @@
 $(document).ready(function () {
 
+  $(window).load(function(){
+    console.log('load');
+    $("#checkout-btn").hide();
+  });
+
+  $('#promo-input').bind('keyup', function() {
+      if(allFilled()) {
+        // $('#checkout-btn').removeAttr('disabled');
+        $("#checkout-btn").show();
+      }
+  });
+
+  function allFilled() {
+      var filled = true;
+      $('#promo-input').each(function() {
+          if($(this).val() == '') filled = false;
+      });
+      return filled;
+  }
+
   $.validator.addMethod("creditCard", function(value, element) {
     return (value === "4");
   }, "Please enter valid credit card number");
@@ -28,9 +48,9 @@ $(document).ready(function () {
       city: {
         required: true
       },
-      // state: {
-      //   required: true
-      // },
+      state: {
+        required: true
+      },
       exp: {
         required: true
       },
@@ -52,7 +72,10 @@ $(document).ready(function () {
 
 
   $.validator.addMethod("couponCode", function(value, element) {
-    if (value === "CB4YE3B3") {
+    if (value === "cc") {
+      // show pay button
+      console.log("show the checkout button");
+      $('#checkout-btn').show();
       return true
     } else if (value.length === 0) {
       return true

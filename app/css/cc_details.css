@@ -229,5 +229,8 @@ td.amount {
 .control--checkbox {
   margin-left: -15px;
 }
-
+#checkout-btn {
+  position: relative;
+  left:-350px;
+}
 

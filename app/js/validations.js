@@ -21,10 +21,8 @@ $(document).ready(function () {
       $('#error-label').html(error);
      },
      submitHandler: function(form) {
-      window.location = "checkout.html";
+      window.location = "checkout_cc.html";
      }
   });
-
-
 
 });

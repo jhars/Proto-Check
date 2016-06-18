@@ -7,32 +7,31 @@
   <title>Checkout-Main</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/cc_details.css" rel="stylesheet">
+  <link href="../css/checkout_cc.css" rel="stylesheet">
 </head>
 <body>
   <img src="../img/thredUP_top.jpg"><br><br>
+
   <div class="container-fluid" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
-    <!-- <div class="row"> -->
-      <div id="error-msg-top"></div>
-      <div id="error-msg-top-subheader"></div>
-    <!-- ********* ******** ************ ********* ********-->  
+    <div id="error-msg-top"></div>
+    <div id="error-msg-top-subheader"></div>
     <!-- ********* ********  MASTER ROW   ******** ******** -->  
     <div class="row" id="master-row">
       <form id="input-form">
-    <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
-      <div class="col-md-7" id="left-col">
-        <!-- ********* INPUT-FORM ******** -->
-        <h6 class="section-title">Shipping Info</h6>
-        <h7 id="shipping-info">Shipping Address</h7><br>
+      <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+        <div class="col-md-7" id="left-col">
+          <!-- ********* INPUT-FORM ******** -->
+          <h6 class="section-title">Shipping Info</h6>
+          <h7 id="shipping-info">Shipping Address</h7><br>
 
           <div class="row">
             <div class="col-xs-6">
               <label>First Name</label><br>
-              <input type="text" class="name shipping-input" name="fname">
+              <input type="text" class="name shipping-input" id="fname" name="fname">
             </div>
             <div class="col-xs-6">
               <label>Last Name</label><br>
-              <input type="text" class="name shipping-input" name="lname">
+              <input type="text" class="name shipping-input" id="lname" name="lname">
             </div>
           </div>
 
@@ -67,7 +66,7 @@
           </div>
           <br>
 
-        <!-- ********* SHIPPING-OPTIONS ******** -->
+          <!-- ********* SHIPPING-OPTIONS ******** -->
           <div class="control-group">
             <h7 id="shipping-info">Shipping Options (estimated):</h7><br>
             <div class="outer-shipping">
@@ -86,9 +85,7 @@
           </div><!-- ********* SHIPPING-OPTIONS (end) ******** -->
           <br><br>
 
-      <!-- ********* PAYMENT-FORM ******** -->
-
-
+          <!-- ********* PAYMENT-FORM ******** -->
           <h6 class="section-title">Payment Info</h6>
           <p id="cc-input-helper">Please input your credit card information(info?)
             <img id="cc-types" src="../img/cc_types.jpg">
@@ -125,8 +122,10 @@
               <div class="control__indicator check-radio"></div>
             </label>
           </div>
-          <img src="../img/place_order.jpg" width="350" height="55"/>
-          <input type="image" alt="Submit" id="checkout-btn" src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
+
+          <input type="button" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
+          <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
+          <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -172,7 +171,7 @@
             <canvas id="dress-thumbnail" width="60" height="80"></canvas>
             <p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
           </div>
-          
+
         </div>
         <div class="row">
           <div class="col-xs-12">
@@ -180,18 +179,16 @@
             <p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
           </div>
         </div><!-- ********* ORDER-SUMMARY (end) ********* -->
+
+
+<!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+<!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
       </div> <!-- right-col-END -->
     </form> <!-- END PAGE FORM -->
-    
 
 
     </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** --> 
   </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
-
-        
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>    <script type="text/javascript" src="../../js/tether.min.js"></script>  <!-- Bootstrap tooltips -->

@@ -1,11 +1,3 @@
-
-// This example displays an address form, using the autocomplete feature
-// of the Google Places API to help users fill in the information.
-
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
 var placeSearch, autocomplete;
 var componentForm = {
   // route: 'long_name',
@@ -65,16 +57,4 @@ function geolocate() {
   }
 }
 
-// document.getElementById("locality").addEventListener("click", function(){
-// 	document.getElementById("locality-lbl").style.display = '';
-// });
-// document.getElementById("sublocality").addEventListener("click", function(){
-// 	document.getElementById("sublocality-lbl").style.display = '';
-// });
-// document.getElementById("administrative_area_level_1").addEventListener("click", function(){
-// 	document.getElementById("administrative_area_level_1-lbl").style.display = '';
-// });
-// document.getElementById("postal_code").addEventListener("click", function(){
-// 	document.getElementById("postal_code-lbl").style.display = '';
-// });
 

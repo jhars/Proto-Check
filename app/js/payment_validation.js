@@ -1,65 +1,68 @@
 $(document).ready(function () {
 
+// ========================= PLACE ORDER BUTTON ===================== //
   $(window).load(function(){
     console.log('load');
-    $("#checkout-btn").hide();
+    // $("#checkout-btn").hide();
   });
 
   $('#promo-input').bind('keyup', function() {
-      if(allFilled()) {
-        // $('#checkout-btn').removeAttr('disabled');
-        $("#checkout-btn").show();
-      }
+    if(allFilled()) {
+      $('#checkout-btn').removeAttr('disabled');
+    } else {
+      $('#checkout-btn').disabled;
+    }
+  });
+
+  $('#fname').bind('keyup', function() {
+    if(allFilled()) {
+      $('#checkout-btn').removeAttr('disabled');
+    } else {
+      $('#checkout-btn').disabled;
+    }
+  });
+
+  $('#lname').bind('keyup', function() {
+    if(allFilled()) {
+      $('#checkout-btn').removeAttr('disabled');
+    } else {
+      $('#checkout-btn').disabled;
+    }
   });
 
   function allFilled() {
-      var filled = true;
-      $('#promo-input').each(function() {
-          if($(this).val() == '') filled = false;
-      });
-      return filled;
+    var filled = true;
+    $('#fname, #lname').each(function() {
+        if($(this).val() == '' || null) {
+          filled = false;
+        } else {
+          return filled;
+        }
+    });
+    
   }
+// ========================= PLACE ORDER BUTTON ===================== //
+
+
 
   $.validator.addMethod("creditCard", function(value, element) {
-    return (value === "4");
+    return (value === "4111");
   }, "Please enter valid credit card number");
 
   $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
-      promo_field: {
-        couponCode: true
-      },
-      payment_details_field: {
-        creditCard: true
-      },
-      fname: {
-        required: true
-      },
-      lname: {
-        required: true
-      },
-      address: {
-        required: true
-      },
-      zip_ship: {
-        required: true
-      },
-      city: {
-        required: true
-      },
-      state: {
-        required: true
-      },
-      exp: {
-        required: true
-      },
-      cvv: {
-        required: true
-      },
-      zip_pay: {
-        required: true
-      }
+      promo_field: { couponCode: true },
+      payment_details_field: { creditCard: true },
+      fname: { required: true },
+      lname: { required: true },
+      address: { required: true },
+      zip_ship: { required: true },
+      city: { required: true },
+      state: { required: true },
+      exp: { required: true },
+      cvv: { required: true },
+      zip_pay: { required: true }
     },
     errorPlacement: function(error, element) {
       console.log(error);

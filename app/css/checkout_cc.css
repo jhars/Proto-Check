@@ -229,8 +229,30 @@ td.amount {
 .control--checkbox {
   margin-left: -15px;
 }
-#checkout-btn {
-  position: relative;
-  left:-350px;
+#checkout-btn:disabled {
+  background-color: white;
+  border: solid #e0e0e0;
+  border-width: 2px 2px 2px 2px;
+  text-align: center;
+  font-size: 18px;
+  color: #e0e0e0;
+  /*vertical-align: middle;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: auto;
+  padding: 20px 300px;
+  width:100%;
 }
-
+#checkout-btn {
+  background-color: #8ecbb1;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 300px;
+  width:100%;
+}

@@ -27,11 +27,11 @@
           <div class="row">
             <div class="col-xs-6">
               <label>First Name</label><br>
-              <input type="text" class="name shipping-input" id="fname" name="fname">
+              <input type="text" class="name shipping-input" id="f-name" name="fname">
             </div>
             <div class="col-xs-6">
               <label>Last Name</label><br>
-              <input type="text" class="name shipping-input" id="lname" name="lname">
+              <input type="text" class="name shipping-input" id="l-name" name="lname">
             </div>
           </div>
 
@@ -94,23 +94,23 @@
           <div class="row" id="row-apt">
             <div class="col-xs-12">
               <label>Card Number</label><br>
-              <input class="full-width shipping-input" type="text" id="sublocality" name="apt">
+              <input class="full-width shipping-input" type="text" id="card-number" name="cc">
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3">
               <label>Expiration</label><br>
-              <input type="text" name="exp" id="exp-month" class="payment-details-field" placeholder="MM" size="4">
+              <input type="text" name="exp_month" id="exp-month" class="payment-details-field" placeholder="MM" size="4">
               <input type="text" name="exp_year" id="exp-year" class="payment-details-field" placeholder="YY" size="4">
             </div>
             <div class="col-xs-5">
               <label>Security Code</label><br>
-              <input type="text" class="shipping-input" id="locality" name="city">
+              <input type="text" class="shipping-input" id="locality" name="cvv">
             </div>
             <div class="col-xs-4">
               <label>Billing Zip Code</label><br>
-              <input type="select" id="administrative_area_level_1" name="state">
+              <input type="select" id="administrative_area_level_1" name="zip_pay">
             </div>
           </div>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -123,7 +123,7 @@
             </label>
           </div>
 
-          <input type="button" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
+          <input type="submit" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
           <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
           <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
@@ -168,14 +168,14 @@
         <h6 class="section-title">Your Cart</h6>
         <div class="row">
           <div class="col-xs-12">
-            <canvas id="dress-thumbnail" width="60" height="80"></canvas>
+            <img id="dress-thumbnail" src="../img/thumb_dress.jpg" width="60" height="80"/>
             <p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
           </div>
 
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <canvas id="blouse-thumbnail" width="60" height="80"></canvas>
+            <img id="blouse-thumbnail" src="../img/thumb_blouse.jpg" width="60" height="80"/>
             <p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
           </div>
         </div><!-- ********* ORDER-SUMMARY (end) ********* -->
@@ -196,7 +196,7 @@
     <!-- CUSTOM JS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
     <script type="text/javascript" src="../js/autocomplete.js"></script>
-    <script type="text/javascript" src="../js/cc_details.js"></script>
-    <script type="text/javascript" src="../js/payment_validation.js"></script>
+    <!-- <script type="text/javascript" src="../js/payment_validation.js"></script> -->
+    <script type="text/javascript" src="../js/cc_info_validation.js"></script>
   </body>
 </html5>

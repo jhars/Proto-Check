@@ -2,44 +2,24 @@ $(document).ready(function () {
 
 // ========================= PLACE ORDER BUTTON ===================== //
   $(window).load(function(){
-    console.log('load');
-    // $("#checkout-btn").hide();
+
   });
 
-  $('#promo-input').bind('keyup', function() {
-    if(allFilled()) {
-      $('#checkout-btn').removeAttr('disabled');
-    } else {
-      $('#checkout-btn').disabled;
-    }
-  });
-
-  $('#fname').bind('keyup', function() {
-    if(allFilled()) {
-      $('#checkout-btn').removeAttr('disabled');
-    } else {
-      $('#checkout-btn').disabled;
-    }
-  });
-
-  $('#lname').bind('keyup', function() {
-    if(allFilled()) {
-      $('#checkout-btn').removeAttr('disabled');
-    } else {
-      $('#checkout-btn').disabled;
-    }
+  $('#l-name').bind('submit', function() {
+      if(allFilled()) {
+        $('#checkout-btn').removeAttr('disabled');
+      } else {
+      }
   });
 
   function allFilled() {
-    var filled = true;
-    $('#fname, #lname').each(function() {
-        if($(this).val() == '' || null) {
-          filled = false;
-        } else {
-          return filled;
-        }
-    });
-    
+      var filled = true;
+      $('#f-name, #l-name').each(function() {
+          if($(this).val() == '') {
+            filled = false;
+          }
+      });
+      return filled;
   }
 // ========================= PLACE ORDER BUTTON ===================== //
 
@@ -67,10 +47,14 @@ $(document).ready(function () {
     errorPlacement: function(error, element) {
       console.log(error);
       console.log(element);
+      // $('#checkout-btn').disabled;
       $('#error-msg-top').html("THERE IS A PROBLEM WITH YOUR ORDER");
       $('#error-msg-top-subheader').html(" Looks like there’s a problem with some payment information");
       $('#error-label').html(error);
-     }
+     },
+     success: function(error){
+      $('#checkout-btn').removeAttr('disabled');
+    }
   });
 
 

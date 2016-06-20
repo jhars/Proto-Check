@@ -1,12 +1,10 @@
 var dress = document.getElementById('dress-thumbnail');
 var blouse = document.getElementById('blouse-thumbnail');
 var recent = document.getElementById('recently-removed');
-// var checkoutBtn = document.getElementById('checkout-btn');
 
 var ctxDress = dress.getContext('2d');
 var ctxBlouse = blouse.getContext('2d');
 var ctxRecent = recent.getContext('2d');
-// var ctxCheckout = checkoutBtn.getContext('2d');
 
 $(window).load(function(){
   console.log('load');
@@ -47,12 +45,13 @@ function loadImages(sources, callback) {
 var myWindow;
 
 function openWin() {
-    myWindow = window.open("", "myWindow", "width=500,height=500");
-    myWindow.document.write('<img src="../img/bg_paypal.jpg"/><div class="container"><form><input id="email" type="text" name="email" placeholder="Email"><br><input id="password" type="text" name="password" placeholder="Password"><br><input id="checkbox" type="checkbox" name="checkbox"><label></label>  <br><input id="submit" type="submit" name="submit" value="Login" onClick="closeWin()"><br><hr><button id="create-acct"></button></form</div>');
+    myWindow = window.open("", "myWindow", "width=500,height=500,left=500,top=500");
+    myWindow.document.write('<img src="../img/bg_paypal.jpg"/><div class="container"><form style="margin-top:-300px; margin-left:150px;" ><br><input id="submit" type="submit" name="submit" style="background-color:#0099e5; color:white" value="Thank you for logging in with Paypal" onClick="window.close()"/></form</div>');
 }
 
 function closeWin() {
-    myWindow.close();
+  console.log("close the effen window!!");
+    // myWindow.close();
 }
 
 

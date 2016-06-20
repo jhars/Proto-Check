@@ -88,51 +88,59 @@
           <br><br>
           <!-- ********* PAYMENT-FORM ******** -->
           <h6 class="section-title" id="payment-section">Payment Info</h6>
-          <p id="cc-input-helper">Please input your credit card information(info?)
-            <img id="cc-types" src="../img/cc_types.jpg">
-          </p>
-
           <div class="row" id="row-apt">
             <div class="col-xs-12">
-              <label class="custom-input-label">Card Number</label><br>
-              <input class="full-width shipping-input" type="text" id="card-number" name="cc" value="">
+              <img id="amazon-info" src="../img/amazon_info_03.png">
+            </div>
+
+              <div class="col-xs-6">
+                <div class="outer-shipping" id="amazon-future-payment">
+                 <label>
+                 <img id="amazon-small-icon" src="../img/amazon_small_icon.png"><br>
+                  <input type="checkbox" id="amazon-check-save-payment"/> 
+                    Use my selected payment for future purchases from this merchant
+                 </label>
+                </div>
+              </div>
+
+            <div class="col-xs-12">
+              <div class="control-group">
+                <label class="control control--checkbox">Securely save the payment method for future purchases
+                  <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
+                  <div class="control__indicator check-radio"></div>
+                </label>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-xs-3">
-              <label class="custom-input-label">Expiration</label><br>
-              <input type="text" name="exp_month" id="exp-month" class="payment-details-field" placeholder="MM" size="4" value="">
-              <input type="text" name="exp_year" id="exp-year" class="payment-details-field" placeholder="YY" size="4" value="">
+            <div class="col-xs-6">
+              <a href="checkout_cc.html"><input type="button" id="cc-alt" name="cc_option"/></a>
             </div>
-            <div class="col-xs-5">
-              <label class="custom-input-label">Security Code</label><br>
-              <input type="text" class="shipping-input" id="cvv" name="cvv" value="">
-            </div>
-            <div class="col-xs-4">
-              <label class="custom-input-label">Billing Zip Code</label><br>
-              <input type="select" id="zip-pay" name="zip_pay" value="">
+            <div class="col-xs-6">
+              <a onclick="openWin()" href="checkout_paypal.html"><input type="button" id="paypal-alt" name="paypal_option"/></a>
             </div>
           </div>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
-          <div class="control-group">
-            <label class="control control--checkbox">Securely save the payment method for future purchases
-              <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
-              <div class="control__indicator check-radio"></div>
-            </label>
-          </div>
-
           <input type="submit" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
-          <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
-          <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
           <span id="error-label"></span>
         </div> <!-- left-col-END -->
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
@@ -192,12 +200,12 @@
   </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>    <script type="text/javascript" src="../../js/tether.min.js"></script>  <!-- Bootstrap tooltips -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../js/tether.min.js"></script>  <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <!-- CUSTOM JS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
     <script type="text/javascript" src="../js/autocomplete.js"></script>
-    <!-- <script type="text/javascript" src="../js/payment_validation.js"></script> -->
-    <script type="text/javascript" src="../js/cc_info_validation.js"></script>
+    <script type="text/javascript" src="../js/amazon_info_validation.js"></script>
   </body>
 </html5>

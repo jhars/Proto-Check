@@ -1,4 +1,5 @@
 $(document).ready(function () {
+		enablePaymentButton(allFilled);
 
   var placeOrder = $('#checkout-btn');
 
@@ -189,6 +190,4 @@ $(document).ready(function () {
     	window.open("https://www.google.com");
     }
 	});
-
-
 });

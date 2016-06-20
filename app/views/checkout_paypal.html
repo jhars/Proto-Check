@@ -27,11 +27,11 @@
           <div class="row">
             <div class="col-xs-6">
               <label class="custom-input-label">First Name</label><br>
-              <input type="text" class="name shipping-input" id="f-name" name="fname" value="">
+              <input type="text" class="name shipping-input" id="f-name" name="fname" value="Jane">
             </div>
             <div class="col-xs-6">
               <label class="custom-input-label">Last Name</label><br>
-              <input type="text" class="name shipping-input" id="l-name" name="lname" value="">
+              <input type="text" class="name shipping-input" id="l-name" name="lname" value="Dough">
             </div>
           </div>
 
@@ -39,29 +39,29 @@
           <div class="row" id="address-search">
             <div class="col-xs-12" id="locationField">
               <label class="custom-input-label">Street Address</label><br>
-              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address" value="">
+              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address" value="114 Sansome Street, San Francisco, CA">
             </div>
           </div>
 
           <div class="row" id="row-apt">
             <div class="col-xs-12">
               <label class="custom-input-label">Apt #, Floor, etc. (optional)</label><br>
-              <input class="full-width shipping-input" type="text" id="sublocality" name="apt" value="">
+              <input class="full-width shipping-input" type="text" id="sublocality" name="apt" value="5">
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3">
               <label class="custom-input-label">Zip</label><br>
-              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship" value="">
+              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship" value="94117">
             </div>
             <div class="col-xs-7">
               <label class="custom-input-label">City</label><br>
-              <input type="text" class="shipping-input" id="locality" name="city" value="">
+              <input type="text" class="shipping-input" id="locality" name="city" value="San Francisco">
             </div>
             <div class="col-xs-2">
               <label class="custom-input-label">State</label><br>
-              <input type="select" id="administrative_area_level_1" name="state" value="">
+              <input type="select" id="administrative_area_level_1" name="state" value="CA">
             </div>
           </div>
           <br>
@@ -88,41 +88,34 @@
           <br><br>
           <!-- ********* PAYMENT-FORM ******** -->
           <h6 class="section-title" id="payment-section">Payment Info</h6>
-          <p id="cc-input-helper">Please input your credit card information(info?)
-            <img id="cc-types" src="../img/cc_types.jpg">
-          </p>
-
           <div class="row" id="row-apt">
             <div class="col-xs-12">
-              <label class="custom-input-label">Card Number</label><br>
-              <input class="full-width shipping-input" type="text" id="card-number" name="cc" value="">
+              <img id="paypal-info" src="../img/paypal_dropdown.png">
+            </div>
+
+            <div class="col-xs-12">
+              <div class="control-group">
+                <label class="control control--checkbox">Securely save the payment method for future purchases
+                  <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
+                  <div class="control__indicator check-radio"></div>
+                </label>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-xs-3">
-              <label class="custom-input-label">Expiration</label><br>
-              <input type="text" name="exp_month" id="exp-month" class="payment-details-field" placeholder="MM" size="4" value="">
-              <input type="text" name="exp_year" id="exp-year" class="payment-details-field" placeholder="YY" size="4" value="">
+            <div class="col-xs-6">
+              <a href="checkout_cc.html"><input type="button" id="cc-alt" name="cc_option"></a>
             </div>
-            <div class="col-xs-5">
-              <label class="custom-input-label">Security Code</label><br>
-              <input type="text" class="shipping-input" id="cvv" name="cvv" value="">
-            </div>
-            <div class="col-xs-4">
-              <label class="custom-input-label">Billing Zip Code</label><br>
-              <input type="select" id="zip-pay" name="zip_pay" value="">
+            <div class="col-xs-6">
+              <a href="checkout_paypal.html"><input type="button" id="amazon-alt" name="paypal_option"></a>
             </div>
           </div>
+
+  
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
-          <div class="control-group">
-            <label class="control control--checkbox">Securely save the payment method for future purchases
-              <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
-              <div class="control__indicator check-radio"></div>
-            </label>
-          </div>
 
           <input type="submit" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
           <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->

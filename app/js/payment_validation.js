@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
 // ========================= PLACE ORDER BUTTON ===================== //
-  $(window).load(function(){
+  // $(window).load(function(){
 
-  });
+  // });
 
   $('#l-name').bind('keyup', function() {
       if(allFilled()) {

@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  var myWindow;
+  function openWin() {
+    console.log("OPEN WINDOW!!");
+      'window.open("", "myWindow", "width=500,height=500,left=500,top=500"); window.document.write("<img src="../img/bg_paypal.jpg"/><div class="container"><form style="margin-top:-300px; margin-left:150px;" ><br><input id="submit" type="submit" name="submit" style="background-color:#0099e5; color:white" value="Thank you for logging in with Paypal" onClick="window.close()"/></form</div>");'
+  }
+  function closeWin() {
+    console.log("close the effen window!!");
+      // myWindow.close();
+  }
 
   var placeOrder = $('#checkout-btn');
 
@@ -8,18 +17,18 @@ $(document).ready(function () {
   var zipShip = $('#postal_code');
   var city = $('#locality');
   var state = $('#administrative_area_level_1');
-  var cardNumber = $('#card-number');
-  var expMonth = $('#exp-month');
-  var expYear = $('#exp-year');
-  var billingZip = $('#zip-pay');
-  var cvv = $('#cvv');
 
-  var inputFields = [fname, lname, address, zipShip, city, state, cardNumber, expMonth, expYear, cvv, billingZip];
+  var inputFields = [fname, lname, address, zipShip, city, state];
   var allFilled = false;
 
-  billingZip.bind('keyup', function() {
+  state.bind('keyup', function() {
     enablePaymentButton(allFilled);
   });
+
+  state.bind('keyup', function() {
+    checkAll(allFilled);
+  });
+
 
   function enablePaymentButton(bool) {
     if (bool == false) {
@@ -30,7 +39,7 @@ $(document).ready(function () {
   };
 
   function checkAll(bool) {
-    var counter = 10;
+    var counter = 5;
     $.each(inputFields, function( index, value ) {
       if ($(this).val() != "") {
         counter --;
@@ -47,9 +56,6 @@ $(document).ready(function () {
     enablePaymentButton(allFilled);
   };
 
-  billingZip.bind('keyup', function() {
-    checkAll(allFilled);
-  });
 
   $.validator.addMethod("creditCard", function(value, element) {
     if (value === "4111") {
@@ -58,7 +64,7 @@ $(document).ready(function () {
         checkAll(allFilled);
         return true ;
     } else {
-    	return false;
+      return false;
     }
   }, "Sorry but your payment was declined br processor. PLease try another card or contact your card issuer. If this continues please contact support@thredup.com");
 
@@ -116,42 +122,6 @@ $(document).ready(function () {
     }
   }, "Please enter your shipping state");
 
-  $.validator.addMethod("expirationMonth", function(value, element) {
-    if (value != "") {
-        checkAll(allFilled);
-        return true ;
-    } else {
-      return false;
-    }
-  }, "Please enter your card expiration month");
-
-  $.validator.addMethod("expirationYear", function(value, element) {
-    if (value != "") {
-        checkAll(allFilled);
-        return true ;
-    } else {
-      return false;
-    }
-  }, "Please enter your car expriation year");
-
-  $.validator.addMethod("CVV", function(value, element) {
-    if (value != "") {
-        checkAll(allFilled);
-        return true ;
-    } else {
-      return false;
-    }
-  }, "Please enter your Security Code");
-
-  $.validator.addMethod("billingZipCode", function(value, element) {
-    if (value != "") {
-        checkAll(allFilled);
-        return true ;
-    } else {
-      return false;
-    }
-  }, "Please enter your Billing Zip Code");
-
   $.validator.addMethod("couponCode", function(value, element) {
     if (value === "CB4YE3B3") {
       return true
@@ -166,17 +136,13 @@ $(document).ready(function () {
   $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
-      cc:  					{ creditCard: true },
-      fname: 				{ firstName: true },
-      lname: 				{ lastName: true },
-      address: 			{ streetAddress: true },
-      zip_ship: 		{ shippingZipCode: true },
-      city: 				{ shippingCity: true },
-      state: 				{ shippingState: true },
-      exp_month:  	{ expirationMonth: true },
-      exp_year: 		{ expirationYear: true },
-      cvv: 					{ CVV: true },
-      zip_pay: 			{ billingZipCode: true },
+      cc:           { creditCard: true },
+      fname:        { firstName: true },
+      lname:        { lastName: true },
+      address:      { streetAddress: true },
+      zip_ship:     { shippingZipCode: true },
+      city:         { shippingCity: true },
+      state:        { shippingState: true },
       checkbox:     { checkBox: true },
       promo_field:  { couponCode: true}
     },
@@ -185,10 +151,10 @@ $(document).ready(function () {
       $("#error-msg-top").html("THERE IS A PROBLEM WITH YOUR ORDER");
       $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
     },
-		submitHandler: function(form) {
-    	window.open("https://www.google.com");
+    submitHandler: function(form) {
+      window.open("https://www.google.com");
     }
-	});
 
+  });
 
 });

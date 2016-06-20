@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   });
 
-  $('#l-name').bind('submit', function() {
+  $('#l-name').bind('keyup', function() {
       if(allFilled()) {
         $('#checkout-btn').removeAttr('disabled');
       } else {

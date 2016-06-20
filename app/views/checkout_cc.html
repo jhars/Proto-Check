@@ -27,11 +27,11 @@
           <div class="row">
             <div class="col-xs-6">
               <label>First Name</label><br>
-              <input type="text" class="name shipping-input" id="f-name" name="fname">
+              <input type="text" class="name shipping-input" id="f-name" name="fname" value="">
             </div>
             <div class="col-xs-6">
               <label>Last Name</label><br>
-              <input type="text" class="name shipping-input" id="l-name" name="lname">
+              <input type="text" class="name shipping-input" id="l-name" name="lname" value="">
             </div>
           </div>
 
@@ -39,29 +39,29 @@
           <div class="row" id="address-search">
             <div class="col-xs-12" id="locationField">
               <label>Street Address</label><br>
-              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address">
+              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address" value="">
             </div>
           </div>
 
           <div class="row" id="row-apt">
             <div class="col-xs-12">
               <label>Apt #, Floor, etc. (optional)</label><br>
-              <input class="full-width shipping-input" type="text" id="sublocality" name="apt">
+              <input class="full-width shipping-input" type="text" id="sublocality" name="apt" value="">
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3">
               <label>Zip</label><br>
-              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship">
+              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship" value="">
             </div>
             <div class="col-xs-7">
               <label>City</label><br>
-              <input type="text" class="shipping-input" id="locality" name="city">
+              <input type="text" class="shipping-input" id="locality" name="city" value="">
             </div>
             <div class="col-xs-2">
               <label>State</label><br>
-              <input type="select" id="administrative_area_level_1" name="state">
+              <input type="select" id="administrative_area_level_1" name="state" value="">
             </div>
           </div>
           <br>
@@ -94,23 +94,23 @@
           <div class="row" id="row-apt">
             <div class="col-xs-12">
               <label>Card Number</label><br>
-              <input class="full-width shipping-input" type="text" id="card-number" name="cc">
+              <input class="full-width shipping-input" type="text" id="card-number" name="cc" value="">
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3">
               <label>Expiration</label><br>
-              <input type="text" name="exp_month" id="exp-month" class="payment-details-field" placeholder="MM" size="4">
-              <input type="text" name="exp_year" id="exp-year" class="payment-details-field" placeholder="YY" size="4">
+              <input type="text" name="exp_month" id="exp-month" class="payment-details-field" placeholder="MM" size="4" value="">
+              <input type="text" name="exp_year" id="exp-year" class="payment-details-field" placeholder="YY" size="4" value="">
             </div>
             <div class="col-xs-5">
               <label>Security Code</label><br>
-              <input type="text" class="shipping-input" id="locality" name="cvv">
+              <input type="text" class="shipping-input" id="cvv" name="cvv" value="">
             </div>
             <div class="col-xs-4">
               <label>Billing Zip Code</label><br>
-              <input type="select" id="administrative_area_level_1" name="zip_pay">
+              <input type="select" id="zip-pay" name="zip_pay" value="">
             </div>
           </div>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -118,7 +118,7 @@
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
           <div class="control-group">
             <label class="control control--checkbox">Securely save the payment method for future purchases
-              <input class="check-radio" type="checkbox"/>
+              <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
               <div class="control__indicator check-radio"></div>
             </label>
           </div>

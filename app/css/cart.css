@@ -24,7 +24,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 10px;
-  /*background-image: url("../img/checkout_with_credit_card_btn.png"); */
 }
 
 #cc-images {
@@ -51,7 +50,13 @@
   border-width: 0 0 2px 0;
   padding-bottom:10px;
 }
-
+#promo-input {
+  width:100%;
+  background-image: url('../img/apply_dark.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  height:45px;
+}
 #promo-field {
   width:100%;
   height:36px;
@@ -71,4 +76,35 @@ th, td {
 }
 td.amount {
   text-align: right;
+}
+#still-not-sure {
+  display: block;
+  width:300px;
+  height:300px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.remove-btn {
+  border: none;
+  background-color: white;
+}
+.remove-btn:hover {
+  text-decoration:underline;
+}
+
+#show-more {
+  display: block;
+  border: none;
+  background-color: white;
+  margin-left:auto;
+  margin-right:auto;
+}
+#show-more:hover {
+  text-decoration: underline;
+}
+#discount-amount {
+  color: #91cfb4;
+}
+#amount-from-shipping {
+  color: red;
 }

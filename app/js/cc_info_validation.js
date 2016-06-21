@@ -1,6 +1,12 @@
 $(document).ready(function () {
 
   var placeOrder = $('#checkout-btn');
+  var coupon = $('#promo-input');
+  var discountRow = $('#discount-row');
+
+  $(window).load(function(){
+    discountRow.hide();
+  });
 
   var fname = $('#f-name');
   var lname = $('#l-name');
@@ -153,15 +159,21 @@ $(document).ready(function () {
   }, "Please enter your Billing Zip Code");
 
   $.validator.addMethod("couponCode", function(value, element) {
-    if (value === "CB4YE3B3") {
+    if (value === "SUMMER") {
+      coupon.css('background-image',"url('../img/apply_white.png')");
+      discountRow.show();
+      console.log("background image should apply");
       return true
     } else if (value.length === 0) {
+      discountRow.hide();
+      coupon.css('background-image',"url('../img/apply_dark.jpg')");
       return true
     } else {
+      discountRow.hide();
+      coupon.css('background-image',"url('../img/apply_dark.jpg')");
       return false
     }
   }, "Please enter valid coupon");
-
 
   $('#input-form').validate({ // initialize the plugin
     debug: false,

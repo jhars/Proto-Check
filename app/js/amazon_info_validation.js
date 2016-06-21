@@ -1,15 +1,6 @@
 $(document).ready(function () {
-  var myWindow;
-  function openWin() {
-    console.log("OPEN WINDOW!!");
-      'window.open("", "myWindow", "width=500,height=500,left=500,top=500"); window.document.write("<img src="../img/bg_paypal.jpg"/><div class="container"><form style="margin-top:-300px; margin-left:150px;" ><br><input id="submit" type="submit" name="submit" style="background-color:#0099e5; color:white" value="Thank you for logging in with Paypal" onClick="window.close()"/></form</div>");'
-  }
-  function closeWin() {
-    console.log("close the effen window!!");
-      // myWindow.close();
-  }
-
   var placeOrder = $('#checkout-btn');
+  var coupon = $('#promo-input');
 
   var fname = $('#f-name');
   var lname = $('#l-name');
@@ -123,11 +114,15 @@ $(document).ready(function () {
   }, "Please enter your shipping state");
 
   $.validator.addMethod("couponCode", function(value, element) {
-    if (value === "CB4YE3B3") {
+    if (value === "SUMMER") {
+      coupon.css('background-image',"url('../img/apply_white.png')");
+      console.log("background image should apply");
       return true
     } else if (value.length === 0) {
+      coupon.css('background-image',"url('../img/apply_dark.jpg')");
       return true
     } else {
+      coupon.css('background-image',"url('../img/apply_dark.jpg')");
       return false
     }
   }, "Please enter valid coupon");
@@ -158,3 +153,14 @@ $(document).ready(function () {
   });
 
 });
+
+var payPalWindow;
+function openWin() {
+  console.log("OPEN WINDOW!!");
+    payPalWindow = window.open("", "payPalWindow", "width=500,height=500,left=500,top=500");
+    payPalWindow.document.write('<img src="../img/bg_paypal.jpg"/><div class="container"><form style="margin-top:-300px; margin-left:150px;"><br><input id="submit" type="submit" name="submit" style="background-color:#0099e5; color:white" value="Thank you for logging in with Paypal" onClick="window.close()"/></form</div>');
+}
+function closeWin() {
+  console.log("close the effen window!!");
+    myWindow.close();
+}

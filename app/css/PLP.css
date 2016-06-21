@@ -1,9 +1,11 @@
-
+.modal-title {
+  color:black;
+}
+.modal-title:hover {
+  color:grey;
+}
 
 #item-container {
-	/*position: relative;*/
-	/*width:82%;*/
-	/*margin-left:185px;*/
 	margin-top:-1850px;
 }
 

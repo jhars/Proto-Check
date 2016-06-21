@@ -1,10 +1,6 @@
 $(document).ready(function () {
 
 // ========================= PLACE ORDER BUTTON ===================== //
-  // $(window).load(function(){
-
-  // });
-
   $('#l-name').bind('keyup', function() {
       if(allFilled()) {
         $('#checkout-btn').removeAttr('disabled');
@@ -22,9 +18,6 @@ $(document).ready(function () {
       return filled;
   }
 // ========================= PLACE ORDER BUTTON ===================== //
-
-
-
   $.validator.addMethod("creditCard", function(value, element) {
     return (value === "4111");
   }, "Please enter valid credit card number");
@@ -47,7 +40,6 @@ $(document).ready(function () {
     errorPlacement: function(error, element) {
       console.log(error);
       console.log(element);
-      // $('#checkout-btn').disabled;
       $('#error-msg-top').html("THERE IS A PROBLEM WITH YOUR ORDER");
       $('#error-msg-top-subheader').html(" Looks like there’s a problem with some payment information");
       $('#error-label').html(error);

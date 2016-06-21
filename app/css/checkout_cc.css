@@ -1,6 +1,12 @@
 label {
   font-size: 12px;
 }
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 .full-width {
   width: 100%;
 }
@@ -15,6 +21,9 @@ label {
 }
 #cvv {
   width:100%;
+  background-image: url('../img/cc_icon.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
 }
 #zip-pay {
   width:100%;
@@ -47,9 +56,9 @@ label {
 #shipping-info {
   font-size: 14;
 }
-/*.shipping-input {
-  margin-top: 0;
-}*/
+.shipping-input {
+  height: 40px;
+}
 .custom-input-label {
   margin-top: 5px;
   margin-bottom: 0;
@@ -65,6 +74,10 @@ label {
 
 #promo-input {
   width:100%;
+  background-image: url('../img/apply_dark.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  height:45px;
 }
 table {
   width:100%;
@@ -75,17 +88,11 @@ th, td {
 td.amount {
   text-align: right;
 }
-#dress-details {
-  font-size:12px;
-  margin-top:-75px;
-  margin-left: 72px;
-  margin-bottom:25px;
-}
 
-#blouse-details {
+.cart-details {
   font-size:12px;
-  margin-top:-75px;
-  margin-left: 72px;
+  margin-top:-150px;
+  margin-left: 130px;
 }
 #total-row {
   border-bottom: solid #fff;
@@ -193,6 +200,8 @@ td.amount {
 }
 
 /************ CHECKBOX *************/
+#check-save {
+}
 
 /* Check mark */
 .control__indicator:after {
@@ -276,9 +285,9 @@ td.amount {
 
 /*======== AMAZON ===========*/
 #amazon-info {
-  display: block;
+  /*display: block;*/
   /*margin: auto;*/
-  width: 90%;
+  /*width: 90%;*/
   /*height:200px;*/
 }
 #amazon-future-payment {
@@ -337,7 +346,6 @@ td.amount {
   background-image: url('../img/alt_cc.png');
   background-repeat: no-repeat;
   margin:auto;
-  /*text-align:right;*/
   border:none;
 }
 #paypal-alt {
@@ -347,7 +355,6 @@ td.amount {
   background: white;
   background-image: url('../img/alt_pp.png');
   background-repeat: no-repeat;
-  /*margin:auto;*/
   text-align:left;
   border:none;
 }
@@ -358,7 +365,24 @@ td.amount {
   background: white;
   background-image: url('../img/alt_amazon.png');
   background-repeat: no-repeat;
-  /*margin:auto;*/
   text-align:left;
   border:none;
+}
+#discount-amount {
+  color: #91cfb4;
+}
+#amount-from-shipping {
+  color: red;
+}
+#dress-details {
+  margin-bottom: 40px;
+}
+.remove-btn {
+  border: none;
+  background-color: white;
+  margin-top:130px;
+  color:black;
+}
+.remove-btn:hover {
+  text-decoration:underline;
 }

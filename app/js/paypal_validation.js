@@ -187,7 +187,8 @@ $(document).ready(function () {
       $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
     },
 		submitHandler: function(form) {
-    	window.open("https://www.google.com");
+    	// window.open("order_confirmation.html");
+      window.location.replace("order_confirmation.html");
     }
 	});
 });

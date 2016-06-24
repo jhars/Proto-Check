@@ -13,7 +13,7 @@
   <div class="row">
     <a href="http://www.thredup.com"><img id="logo" src="../img/thredUP_logo.png"></a><hr>
   </div>
-  <div class="container-fluid" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
+  <div class="container" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
     <div id="error-msg-top"></div>
     <div id="error-msg-top-subheader"></div>
     <!-- ********* ********  MASTER ROW   ******** ******** -->
@@ -129,6 +129,7 @@
           <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
           <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
+          </form> <!-- =========== END FORM ============== -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -141,10 +142,13 @@
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
 
-        <form id=promo-form>
-          <label class="custom-input-label">Promo</label>
-          <input id="promo-input" type="text" name="promo_field"><br>
-        </form>
+        <div class="flexContainer">
+          <input type="text" class="inputField" id="promo-input" name="promo_field">
+          <button id="apply-btn">
+            <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+          </button>
+        </div>
+        <span id="error-apply"></span>
         <table>
           <tr>
             <td>Subtotal:</td>
@@ -193,7 +197,7 @@
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
       </div> <!-- right-col-END -->
-    </form> <!-- END PAGE FORM -->
+    <!-- </form> END PAGE FORM -->
     </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** -->
   </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
 

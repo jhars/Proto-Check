@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<img src="../img/bg-checkout.jpg" alt="">
-		<div class="container-fluid" id ="checkout-container">
+		<div class="container" id ="checkout-container">
 			<div class="row" id="shopping-order">
 				<div class="col-lg-8">
 					<p>Shopping Cart</p><hr>
@@ -31,12 +31,17 @@
 					</div>
 					<br><button id="show-more">Show More</button>
 				</div>
-
 				<div class="col-lg-4">
 				  <p>Order Summary</p><hr>
-				  <form id=promo-form>
-				  	<label class="custom-input-label">Promo</label>
-				  	<input id="promo-input" type="text" name="promo_field"><br>
+				  <!-- <form id="promo-form"> -->
+					  <label class="custom-input-label">Promo</label>
+				  	<div class="flexContainer">
+				  	  <input type="text" class="inputField" id="promo-input" name="promo_field">
+				  	  <button id="apply-btn">
+				  	  	<canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+				  	  </button>
+				  	</div>
+				  <!-- </form> -->
 				    <span id="error-label"></span>
 				    <br>
 				    <table>
@@ -68,15 +73,16 @@
 				        <td class="amount">You're only <span id="amount-from-shipping">$22.03</span> away from <strong>FREE shipping</strong></td>
 				      </tr>
 				    </table>
-					  <div id="payment-options" class="col-lg-12">
-				    	<input type="image" alt="Submit" id="checkout-btn" src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
-					    <img id="cc-images" src="../img/payment_buttons/CC_images.png">
-					    <a href="checkout_paypal.html" onclick="openWin()">
-					    	<img id="pay-pal-btn" src="../img/payment_buttons/pay_pal_chkout.png"><br>
-					    </a>
-					    <a href="checkout_amazon.html"><img id="amazon-btn" src="../img/payment_buttons/pay_with_amazon.png"><br></a>
-					  </div>
-				 </form>
+						  <div id="payment-options" class="col-lg-12">
+					    	<a id="checkout-btn" href="checkout_cc.html"/>
+					    		<img src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
+					    	</a>
+						    <img id="cc-images" src="../img/payment_buttons/CC_images.png">
+						    <a href="checkout_paypal.html" onclick="openWin()">
+						    	<img id="pay-pal-btn" src="../img/payment_buttons/pay_pal_chkout.png"><br>
+						    </a>
+						    <a href="checkout_amazon.html"><img id="amazon-btn" src="../img/payment_buttons/pay_with_amazon.png"><br></a>
+						  </div>
 				 <div class="col-lg-12">
 				 		<img id="still-not-sure" src="../img/still_not_sure.png"/>
 				 </div>

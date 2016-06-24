@@ -12,7 +12,7 @@
 <body>
   <img src="../img/thredUP_top.jpg"><br><br>
 
-  <div class="container-fluid" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
+  <div class="container" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
     <div id="error-msg-top"></div>
     <div id="error-msg-top-subheader"></div>
     <!-- ********* ********  MASTER ROW   ******** ******** -->  
@@ -110,6 +110,7 @@
           <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
           <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
+          </form> <!-- =========== END FORM ============== -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -122,15 +123,18 @@
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
 
-        <form id=promo-form>
-        <label class="custom-input-label">Promo</label>
-            <input id="promo-input" type="text" name="promo_field"><br>
-        </form>
+        <div class="flexContainer">
+          <input type="text" class="inputField" id="promo-input" name="promo_field">
+          <button id="apply-btn">
+            <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+          </button>
+        </div>
+        <span id="error-apply"></span>
         <table>
           <tr>
             <td>Subtotal:</td>
             <td class="amount">$65.00</td>
-          </tr>
+          </tr
           <tr>
             <td>Tax:</td>
             <td class="amount">$0.00</td>
@@ -181,5 +185,7 @@
     <script type="text/javascript" src="../js/autocomplete.js"></script>
     <!-- <script type="text/javascript" src="../js/payment_validation.js"></script> -->
     <script type="text/javascript" src="../js/cc_info_validation.js"></script>
+    <script type="text/javascript" src="../js/amazon_info_validation.js"></script>
+    <script type="text/javascript" src="../js/paypal_validation.js"></script>
   </body>
 </html5>

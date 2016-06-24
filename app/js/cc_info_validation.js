@@ -1,13 +1,55 @@
+var applyBtn = document.getElementById('apply-img');
+var ctxApply = applyBtn.getContext('2d');
+var coupon = $('#promo-input');
+var discountRow = $('#discount-row');
+
+$(window).load(function(){
+  discountRow.hide();
+  loadImages(sources, function(images) {
+    ctxApply.drawImage(images.apply, 0,0,108,37);
+  });
+});
+
+function apply() {
+  console.log("APLLYYYYYY");
+  if (coupon.val() == "SUMMER") {
+    ctxApply.drawImage(images.applied, 0,0,108,37);
+    $('#error-apply').hide();
+  } else {
+    $('#error-apply').show();
+    $('#error-apply').html("Please enter valid coupon");
+    ctxApply.drawImage(images.apply, 0,0,108,37);
+  }
+  console.log("APLLIED");
+};
+
+var sources = {
+  dress: "../img/thumb_dress.jpg",
+  blouse: "../img/thumb_blouse.jpg",
+  recent: "../img/recently_removed.jpg",
+  apply: "../img/apply_dark.jpg",
+  applied: "../img/apply_white.png"
+};
+var images = {};
+function loadImages(sources, callback) {
+  var loadedImages = 0;
+  var numImages = 0;
+  for(var src in sources) {
+    numImages++;
+  } for (var src in sources) {
+    images[src] = new Image();
+    images[src].onload = function() {
+      if(++loadedImages >= numImages) {
+        callback(images);
+      }
+    };
+    images[src].src = sources[src];
+  }
+};
+
 $(document).ready(function () {
 
   var placeOrder = $('#checkout-btn');
-  var coupon = $('#promo-input');
-  var discountRow = $('#discount-row');
-
-  $(window).load(function(){
-    discountRow.hide();
-  });
-
   var fname = $('#f-name');
   var lname = $('#l-name');
   var address = $('#sublocality');
@@ -158,23 +200,6 @@ $(document).ready(function () {
     }
   }, "Please enter your Billing Zip Code");
 
-  $.validator.addMethod("couponCode", function(value, element) {
-    if (value === "SUMMER") {
-      coupon.css('background-image',"url('../img/apply_white.png')");
-      discountRow.show();
-      console.log("background image should apply");
-      return true
-    } else if (value.length === 0) {
-      discountRow.hide();
-      coupon.css('background-image',"url('../img/apply_dark.jpg')");
-      return true
-    } else {
-      discountRow.hide();
-      coupon.css('background-image',"url('../img/apply_dark.jpg')");
-      return false
-    }
-  }, "Please enter valid coupon");
-
   $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
@@ -189,8 +214,7 @@ $(document).ready(function () {
       exp_year: 		{ expirationYear: true },
       cvv: 					{ CVV: true },
       zip_pay: 			{ billingZipCode: true },
-      checkbox:     { checkBox: true },
-      promo_field:  { couponCode: true}
+      checkbox:     { checkBox: true }
     },
     errorPlacement: function(error, element) {
       $('#error-label').html(error);
@@ -202,6 +226,4 @@ $(document).ready(function () {
       window.location.replace("order_confirmation.html");
     }
 	});
-
-
 });

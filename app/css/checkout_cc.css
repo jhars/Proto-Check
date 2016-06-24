@@ -74,7 +74,7 @@ label {
 
 #promo-input {
   width:100%;
-  background-image: url('../img/apply_dark.jpg');
+  /*background-image: url('../img/apply_dark.jpg');*/
   background-repeat: no-repeat;
   background-position: right;
   height:45px;
@@ -386,3 +386,39 @@ td.amount {
 .remove-btn:hover {
   text-decoration:underline;
 }
+
+.flexContainer {
+  display: flex;
+}
+
+.inputField {
+  flex: 1;
+}
+#apply-btn {
+  background-color: white;
+  border: none;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+}
+#promo-input {
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  border:none;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+}
+#error-apply {
+  color: red;
+}
+/*#promo-input {
+  width:700px;
+  background-repeat: no-repeat;
+  background-position: right;
+  border:none;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-left: 2px solid grey;
+}*/

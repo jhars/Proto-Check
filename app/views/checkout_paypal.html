@@ -96,7 +96,7 @@
             <div class="col-xs-12">
               <div class="control-group">
                 <label class="control control--checkbox">Securely save the payment method for future purchases
-                  <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
+                  <input class="check-radio" type="checkbox" name="checksave" id="check-save" checked/>
                   <div class="control__indicator check-radio"></div>
                 </label>
               </div>
@@ -122,7 +122,7 @@
       <div class="col-md-5" id="right-col">
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
-
+        <label class="custom-input-label">Promo</label>
         <div class="flexContainer">
           <input type="text" class="inputField" id="promo-input" name="promo_field">
           <button id="apply-btn">
@@ -155,16 +155,17 @@
         <h6 class="section-title">Your Cart</h6>
         <div class="row">
           <div class="col-xs-12">
-            <img id="dress-thumbnail" src="../img/thumb_dress.jpg" width="60" height="80"/>
-            <p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+            <img id="dress-thumbnail" src="../img/thumb_dress.jpg" width="120" height="160"/>
+            <p id="dress-details" class="cart-details">Versace for H&M<br>Silk Dress<br>Small<br>$24.99<br><br><br><br><a id="remove-dress" class="remove-btn">Remove</a></p>
           </div>
 
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <img id="blouse-thumbnail" src="../img/thumb_blouse.jpg" width="60" height="80"/>
-            <p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+            <img id="blouse-thumbnail" src="../img/thumb_blouse.jpg" width="120" height="160"/>
+            <p id="blouse-details" class="cart-details">Versace for H&M<br>Silk Dress<br>Small<br>$24.99<br><br><br><br><a id="remove-blouse" class="remove-btn">Remove</a></p>
           </div>
+        </div>
         </div><!-- ********* ORDER-SUMMARY (end) ********* -->
 
 

@@ -4,33 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>PLP</title>
+		<title>PDP</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 		<link href="../../css/bootstrap.min.css" rel="stylesheet">
 		<link href="../../css/mdb.min.css" rel="stylesheet">
-		<link href="../css/PLP.css" rel="stylesheet">
+		<link href="../css/PDP.css" rel="stylesheet">
 	</head>
-	<body onload="drawScene()" >
+	<body>
 		<img src="../img/PLP_blank.jpg" alt=""> <!-- BG IMAGE -->
 		<div class="container" id ="item-container">
 			<div class="row" id="item-row-one">
-				<div class="col-xs-3">
-					<canvas id="dress" width="180" height="299"></canvas>
-					<button class="atc-button" id="dress-atc" data-toggle="modal" data-target=".cart-popup"></button>
+				<div class="col-lg-6">
+					<canvas id="jeans-left" width="617" height="834"></canvas>
 				</div>
-				<div class="col-xs-3">
-					<canvas id="blouse" width="180" height="299"></canvas>
-					<button class="atc-button" id="blouse-atc" data-toggle="modal" data-target=".cart-popup"></button>
-				</div>
-				<div class="col-xs-3">
-					<canvas id="jeans" width="180" height="299"></canvas>
-					<button class="atc-button" id="jeans-atc" data-toggle="modal" data-target=".cart-popup"></button>
-				</div>
-				<div class="col-xs-3">
-					<canvas id="tank" width="180" height="299"></canvas>
-					<button class="atc-button" id="tank-atc" data-toggle="modal" data-target=".cart-popup"></button>
+				<div class="col-lg-6">
+					<div class="row">
+						<h6 id="brand"><strong>EXPRESS</strong></h6>
+						<img id="jeans-price" src="../img/PDP/jeans_price.png"><br>
+						<button class="atc-button" id="dress-atc" data-toggle="modal" data-target=".cart-popup">ADD TO CART</button>
+						<img id="in-your-cart" src="../img/PDP/in_your_cart_btn.png"/>
+					</div>
+					<div class="row">
+						<canvas id="jeans-details" width="618" height="487"></canvas>
+					</div>
 				</div>
 			</div>
+			<canvas id="you-may-also-like" width="1242" height="407"></canvas>
 		</div>
 
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ Modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -48,13 +47,12 @@
 			      	<div class="top-popup-row">
 
 				      	<div class="col-xs-6">
-				      		<canvas id="item-popup" width="137" height="183"></canvas>
-				      		<canvas id="item-details-popup" width="137" height="183"></canvas>
+				      		<canvas id="item-details-popup" width="617" height="834"></canvas>
 				      	</div>
 
 			      		<div class="col-xs-6" id="checkout-continue-row">
 			      			<div class="row">
-			      				<a href="cart.html"><canvas id="btn-checkout" width="316" height="56" href="cart.html"></canvas></a>
+			      				<canvas id="primary-item-details" width="639" height="347"></canvas>
 			      			</div>
 			      			<div class="row">
 			      				<a><canvas id="btn-continue" width="316" height="56" data-dismiss="modal"></canvas></a>
@@ -79,7 +77,7 @@
 		<script type="text/javascript" src="../../js/tether.min.js"></script>
 		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../../js/mdb.min.js"></script>
-		<script type="text/javascript" src="../js/PLP.js"></script>
-		<script type="text/javascript" src="../js/popup.js"></script>
+		<!-- <script type="text/javascript" src="../js/addToCart.js"></script> -->
+		<script type="text/javascript" src="../js/PDP.js"></script>
   </body>
 </html5>

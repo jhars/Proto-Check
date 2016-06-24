@@ -1,0 +1,53 @@
+.modal-title {
+  color:black;
+}
+.modal-title:hover {
+  color:grey;
+}
+
+#item-container {
+	margin-top:-1800px;
+}
+
+#checkout-continue-row {
+	margin-top:35px;
+}
+
+.atc-button {
+  display: block;
+  margin-left: 10%;
+  width:100%;
+  height: 60px;
+
+  border: none;
+  background-color: #8fd0b3;
+  color: white;
+  background-repeat: no-repeat;
+}
+.atc-button:hover {
+  background-color: white;
+  color: #8fd0b3;
+  border: solid #8fd0b3;
+  border-width: 2px 2px 2px 2px;
+}
+
+#item-row-one {
+  margin-left: 100px;
+}
+
+#jeans-price {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+}
+#brand {
+  display: block;
+  margin-left: 5%;
+  text-align: center;
+}
+#in-your-cart {
+  margin-left: 10%;
+  width:100%;
+  height: 60px;
+}

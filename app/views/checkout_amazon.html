@@ -12,20 +12,20 @@
 <body>
   <img src="../img/thredUP_top.jpg"><br><br>
 
-  <div class="container-fluid" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
+  <div class="container" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
     <div id="error-msg-top"></div>
     <div id="error-msg-top-subheader"></div>
     <!-- ********* ********  MASTER ROW   ******** ******** -->  
     <div class="row" id="master-row">
-      <form id="input-form">
+      <!-- <form id="input-form"> -->
       <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
         <div class="col-md-7" id="left-col">
           <!-- ********* INPUT-FORM ******** -->
-          <h6 class="section-title">Shipping Info</h6>2
+          <h6 class="section-title">Shipping Info</h6>
           <h7 id="shipping-info">Shipping Address</h7><br>
 
           <div class="row">
-            <img src="../img/amazon_shipping.png"/>
+            <img src="../img/amazon_shipping.jpg"/>
           </div>
           <br>
 
@@ -53,23 +53,12 @@
           <h6 class="section-title" id="payment-section">Payment Info</h6>
           <div class="row" id="row-apt">
             <div class="col-xs-12">
-              <img id="amazon-info" src="../img/amazon_shipping.png">
+              <img id="amazon-info" src="../img/amazon_payment.jpg">
             </div>
-
-              <div class="col-xs-6">
-                <div class="outer-shipping" id="amazon-future-payment">
-                 <label>
-                 <img id="amazon-small-icon" src="../img/amazon_small_icon.png"><br>
-                  <input type="checkbox" id="amazon-check-save-payment"/> 
-                    Use my selected payment for future purchases from this merchant
-                 </label>
-                </div>
-              </div>
-
             <div class="col-xs-12">
               <div class="control-group">
                 <label class="control control--checkbox">Securely save the payment method for future purchases
-                  <input class="check-radio" type="checkbox" name="checksave" id="check-save"/>
+                  <input class="check-radio" type="checkbox" name="checksave" id="check-save" checked/>
                   <div class="control__indicator check-radio"></div>
                 </label>
               </div>
@@ -89,11 +78,14 @@
       <div class="col-md-5" id="right-col">
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
-
-        <form id=promo-form>
         <label class="custom-input-label">Promo</label>
-            <input id="promo-input" type="text" name="promo_field"><br>
-        </form>
+        <div class="flexContainer">
+          <input type="text" class="inputField" id="promo-input" name="promo_field">
+          <button id="apply-btn">
+            <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+          </button>
+        </div>
+        <span id="error-apply"></span>
         <table>
           <tr>
             <td>Subtotal:</td>
@@ -119,19 +111,20 @@
         <h6 class="section-title">Your Cart</h6>
         <div class="row">
           <div class="col-xs-12">
-            <img id="dress-thumbnail" src="../img/thumb_dress.jpg" width="60" height="80"/>
-            <p id="dress-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+            <img id="dress-thumbnail" src="../img/thumb_dress.jpg" width="120" height="160"/>
+            <p id="dress-details" class="cart-details">Versace for H&M<br>Silk Dress<br>Small<br>$24.99<br><br><br><br><a id="remove-dress" class="remove-btn">Remove</a></p>
           </div>
 
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <img id="blouse-thumbnail" src="../img/thumb_blouse.jpg" width="60" height="80"/>
-            <p id="blouse-details">Versace for H&M<br>Silk Dress<br>Small<br>$42.99</p>
+            <img id="blouse-thumbnail" src="../img/thumb_blouse.jpg" width="120" height="160"/>
+            <p id="blouse-details" class="cart-details">Versace for H&M<br>Silk Dress<br>Small<br>$24.99<br><br><br><br><a id="remove-blouse" class="remove-btn">Remove</a></p>
           </div>
+        </div>
         </div><!-- ********* ORDER-SUMMARY (end) ********* -->
       </div> <!-- right-col-END -->
-    </form> <!-- END PAGE FORM -->
+    <!-- </form> END PAGE FORM -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
     </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** --> 
   </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
@@ -141,6 +134,6 @@
     <script type="text/javascript" src="../../js/tether.min.js"></script>  <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <!-- CUSTOM JS -->
-    <!-- <script type="text/javascript" src="../js/amazon_info_validation.js"></script> -->
+    <script type="text/javascript" src="../js/amazon_info_validation.js"></script>
   </body>
 </html5>

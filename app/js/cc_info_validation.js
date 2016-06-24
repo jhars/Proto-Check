@@ -3,6 +3,10 @@ var ctxApply = applyBtn.getContext('2d');
 var coupon = $('#promo-input');
 var discountRow = $('#discount-row');
 
+var errLabel = $('#error-label');
+var errMsgTop = $("#error-msg-top");
+var errMsgTopSubHeader = $("#error-msg-top-subheader");
+
 $(window).load(function(){
   discountRow.hide();
   loadImages(sources, function(images) {
@@ -87,9 +91,6 @@ $(document).ready(function () {
         } else {
           allFilled = false;
         }
-        console.log(bool);
-        // enablePaymentButton(bool);
-        console.log(counter);
       }
     });
     enablePaymentButton(allFilled);
@@ -99,13 +100,19 @@ $(document).ready(function () {
     checkAll(allFilled);
   });
 
+// errLabel
+// errMsgTop
+// errMsgTopSubHeader
   $.validator.addMethod("creditCard", function(value, element) {
     if (value === "4111") {
         console.log("value is 4111, Return True");
-        console.log(inputFields.length);
+        errMsgTop.hide();
+        errMsgTopSubHeader.hide();
         checkAll(allFilled);
         return true ;
     } else {
+        errMsgTop.show();
+        errMsgTopSubHeader.show();
     	return false;
     }
   }, "Sorry but your payment was declined br processor. PLease try another card or contact your card issuer. If this continues please contact support@thredup.com");

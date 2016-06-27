@@ -11,7 +11,9 @@
 		<link href="../css/PDP.css" rel="stylesheet">
 	</head>
 	<body>
-		<img src="../img/PLP_blank.jpg" alt=""> <!-- BG IMAGE -->
+
+		<a href="cart.html"><img id="cart-icon" src="../img/cart_icon.png" alt=""></a>
+		<img class="mock-bg" src="../img/NAV_blank.jpg" alt=""> <!-- BG IMAGE -->
 		<div class="container" id ="item-container">
 			<div class="row" id="item-row-one">
 				<div class="col-lg-6">
@@ -47,15 +49,16 @@
 			      	<div class="top-popup-row">
 
 				      	<div class="col-xs-6">
-				      		<canvas id="item-details-popup" width="617" height="834"></canvas>
+				      		<canvas id="item-popup" width="137" height="183"></canvas>
+				      		<canvas id="item-details-popup" width="137" height="183"></canvas>
 				      	</div>
 
 			      		<div class="col-xs-6" id="checkout-continue-row">
 			      			<div class="row">
-			      				<canvas id="primary-item-details" width="639" height="347"></canvas>
+			      				<a href="cart.html"><canvas id="btn-checkout" width="316" height="56" href="cart.html"></canvas></a>
 			      			</div>
 			      			<div class="row">
-			      				<a><canvas id="btn-continue" width="316" height="56" data-dismiss="modal"></canvas></a>
+			      				<a href="plp.html"><canvas id="btn-continue" width="316" height="56" href="plp.html"></canvas></a>
 			      			</div>
 			      		</div>
 
@@ -63,7 +66,7 @@
 			      </div>
 			      <br><hr>
 		        <div class="container-fluid" id="also-like-row">
-		        	<canvas id="you-may-also-like" width="827" height="319"></canvas>
+		        	<canvas id="you-may-also-like-modal" width="827" height="319"></canvas>
 		        </div>
 		      </div>
 		      <div class="modal-footer"></div>
@@ -71,7 +74,6 @@
 		  </div>
 		</div>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ Modal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
 		<!-- SCRIPTS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script type="text/javascript" src="../../js/tether.min.js"></script>
@@ -79,5 +81,6 @@
 		<script type="text/javascript" src="../../js/mdb.min.js"></script>
 		<!-- <script type="text/javascript" src="../js/addToCart.js"></script> -->
 		<script type="text/javascript" src="../js/PDP.js"></script>
+		<script type="text/javascript" src="../js/popup_PDP.js"></script>
   </body>
 </html5>

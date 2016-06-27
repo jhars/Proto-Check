@@ -13,21 +13,24 @@
  text-align: center;
  font-weight: bold;
 }
-::-moz-placeholder { /* Firefox 19+ */ 
+::-moz-placeholder { /* Firefox 19+ */
  font-size: 6px;
- color: #d0cdfa; 
- text-transform: uppercase;
- text-align: center;
- font-weight: bold;
-} 
-:-ms-input-placeholder { 
- font-size: 6px; 
  color: #d0cdfa;
  text-transform: uppercase;
  text-align: center;
  font-weight: bold;
 }
-
+:-ms-input-placeholder {
+ font-size: 6px;
+ color: #d0cdfa;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}
+.mock-bg {
+  display: block;
+  margin: auto;
+}
 label {
   font-size: 12px;
 }

@@ -10,7 +10,7 @@
 		<link href="../css/cart.css" rel="stylesheet">
 	</head>
 	<body>
-		<img src="../img/bg-checkout.jpg" alt="">
+		<img class="mock-bg" src="../img/bg-checkout.jpg" alt="">
 		<div class="container" id ="checkout-container">
 			<div class="row" id="shopping-order">
 				<div class="col-lg-8">
@@ -33,15 +33,16 @@
 				</div>
 				<div class="col-lg-4">
 				  <p>Order Summary</p><hr>
-				  <!-- <form id="promo-form"> -->
+				  <!-- PROMO FORM <form> -->
+				  <!-- <form> -->
 					  <label class="custom-input-label">Promo</label>
 				  	<div class="flexContainer">
-				  	  <input type="text" class="inputField" id="promo-input" name="promo_field">
+				  	  <input type="text" class="inputField" id="promo-input" name="promo_field" value="">
 				  	  <button id="apply-btn">
 				  	  	<canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
 				  	  </button>
 				  	</div>
-				  <!-- </form> -->
+				  <!-- PROMO FORM </form> -->
 				    <span id="error-label"></span>
 				    <br>
 				    <table>
@@ -74,21 +75,27 @@
 				      </tr>
 				    </table>
 						  <div id="payment-options" class="col-lg-12">
-					    	<a id="checkout-btn" href="checkout_cc.html"/>
-					    		<img src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
-					    	</a>
+					    	<!-- <a id="checkout-btn" href="checkout_cc.html"/> -->
+					    	<button class="checkout" type="" href="checkout_cc.html">
+					    		<img onclick="checkoutBtnPressed()" src="../img/payment_buttons/checkout_with_credit_card_btn.png" width="350" height="55"/>
+					    	</button>
+					    	<!-- </a> -->
 						    <img id="cc-images" src="../img/payment_buttons/CC_images.png">
-						    <a href="checkout_paypal.html" onclick="openWin()">
-						    	<img id="pay-pal-btn" src="../img/payment_buttons/pay_pal_chkout.png"><br>
-						    </a>
+						    <!-- paypalBtnPressed() -->
+						    <button class="checkout" type="" onclick="openWin()">
+						    	<img onclick="paypalBtnPressed()" src="../img/payment_buttons/pay_pal_chkout.png"/>
+						    </button>
+						    <!-- <a href="checkout_paypal.html" onclick="openWin()"><img id="pay-pal-btn" src="../img/payment_buttons/pay_pal_chkout.png"><br></a> -->
 						    <a href="checkout_amazon.html"><img id="amazon-btn" src="../img/payment_buttons/pay_with_amazon.png"><br></a>
 						  </div>
-				 <div class="col-lg-12">
-				 		<img id="still-not-sure" src="../img/still_not_sure.png"/>
-				 </div>
+
+						<!-- </form> -->
+				 		<div class="col-lg-12">
+				 			<img id="still-not-sure" src="../img/still_not_sure.png"/>
+				 		</div>
+					</div>
 				</div>
 			</div>
-		</div>
 
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>

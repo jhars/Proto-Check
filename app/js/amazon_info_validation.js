@@ -10,22 +10,38 @@ function closeWin() {
 var coupon = $('#promo-input');
 var discountRow = $('#discount-row');
 
-var applyBtn = document.getElementById('apply-img');
-var ctxApply = applyBtn.getContext('2d');
+var applyImg = document.getElementById('apply-img'); var ctxApplyImg = applyImg.getContext('2d');
 
+$('#promo-input').on('keyup', function(){
+    ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+  });
 
 function apply() {
   console.log("APLLYYYYYY");
   if (coupon.val() == "SUMMER") {
-    ctxApply.drawImage(images.applied, 0,0,108,37);
+    ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+    discountRow.show();
     $('#error-apply').hide();
   } else {
     $('#error-apply').show();
     $('#error-apply').html("Please enter valid coupon");
-    ctxApply.drawImage(images.apply, 0,0,108,37);
+    ctxApplyImg.drawImage(images.apply, 0,0,108,37);
   }
   console.log("APLLIED");
 };
+
+// function apply() {
+//   console.log("APLLYYYYYY");
+//   if (coupon.val() == "SUMMER") {
+//     ctxApply.drawImage(images.applied, 0,0,108,37);
+//     $('#error-apply').hide();
+//   } else {
+//     $('#error-apply').show();
+//     $('#error-apply').html("Please enter valid coupon");
+//     ctxApply.drawImage(images.apply, 0,0,108,37);
+//   }
+//   console.log("APLLIED");
+// };
 // ============= Images =================== //
 
 //================ Image Loader ===================//
@@ -54,6 +70,6 @@ $(window).load(function(){
   console.log('load');
   discountRow.hide();
   loadImages(sources, function(images) {
-    ctxApply.drawImage(images.apply, 0,0,108,37);
+    // ctxApplyImg.drawImage(images.apply, 0,0,108,37);
   });
 });

@@ -1,5 +1,11 @@
-var applyBtn = document.getElementById('apply-img');
-var ctxApply = applyBtn.getContext('2d');
+  $('#promo-input').on('keyup', function(){
+      ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+    });
+
+var applyImg = document.getElementById('apply-img'); var ctxApplyImg = applyImg.getContext('2d');
+
+// var applyBtn = document.getElementById('apply-img');
+// var ctxApply = applyBtn.getContext('2d');
 var coupon = $('#promo-input');
 var discountRow = $('#discount-row');
 
@@ -8,21 +14,22 @@ var errMsgTop = $("#error-msg-top");
 var errMsgTopSubHeader = $("#error-msg-top-subheader");
 
 $(window).load(function(){
-  discountRow.hide();
+  // discountRow.hide();
   loadImages(sources, function(images) {
-    ctxApply.drawImage(images.apply, 0,0,108,37);
+    ctxApplyImg.drawImage(images.applied, 0,0,108,37);
   });
 });
 
 function apply() {
   console.log("APLLYYYYYY");
   if (coupon.val() == "SUMMER") {
-    ctxApply.drawImage(images.applied, 0,0,108,37);
+    ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+    discountRow.show();
     $('#error-apply').hide();
   } else {
     $('#error-apply').show();
     $('#error-apply').html("Please enter valid coupon");
-    ctxApply.drawImage(images.apply, 0,0,108,37);
+    ctxApplyImg.drawImage(images.apply, 0,0,108,37);
   }
   console.log("APLLIED");
 };
@@ -207,6 +214,17 @@ $(document).ready(function () {
     }
   }, "Please enter your Billing Zip Code");
 
+  $.validator.addMethod("couponCode", function(value, element) {
+    if (value === "SUMMER") {
+      return true
+    } else if (value.length === 0) {
+      return true
+    } else {
+      return false
+    }
+  }, "Please enter valid coupon");
+
+
   $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
@@ -221,7 +239,8 @@ $(document).ready(function () {
       exp_year: 		{ expirationYear: true },
       cvv: 					{ CVV: true },
       zip_pay: 			{ billingZipCode: true },
-      checkbox:     { checkBox: true }
+      checkbox:     { checkBox: true },
+      promo_field:  { couponCode: true}
     },
     errorPlacement: function(error, element) {
       $('#error-label').html(error);
@@ -229,8 +248,15 @@ $(document).ready(function () {
       $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
     },
 		submitHandler: function(form) {
-    	// window.open("order_confirmation.html");
-      window.location.replace("order_confirmation.html");
+    	if ((coupon.val() == "SUMMER") || !coupon.val() ) {
+    	  document.location = './order_confirmation.html'
+    	}
+    	placeOrderBtnPushed();
     }
 	});
+	function placeOrderBtnPushed() {
+	  $('#error-apply').html("Please Enter a Valid Coupon");
+	  $("#error-msg-top").html("THERE IS A PROBLEM WITH YOUR ORDER");
+	  $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
+	}
 });

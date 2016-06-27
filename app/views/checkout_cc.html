@@ -142,12 +142,17 @@
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
         <label class="custom-input-label">Promo</label>
-        <div class="flexContainer">
-          <input type="text" class="inputField" id="promo-input" name="promo_field">
-          <button id="apply-btn">
-            <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
-          </button>
-        </div>
+          <!-- PROMO FORM <form> -->
+          <!-- <form id="coupon-code-form"> -->
+            <label class="custom-input-label">Promo</label>
+            <div class="flexContainer">
+              <input type="text" class="inputField" id="promo-input" name="promo_field" >
+              <button id="apply-btn">
+                <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+              </button>
+            </div>
+          <!-- PROMO FORM </form> -->
+          <!-- </form> -->
         <span id="error-apply"></span>
         <table>
           <tr>
@@ -207,6 +212,6 @@
     <!-- CUSTOM JS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
     <script type="text/javascript" src="../js/autocomplete.js"></script>
-    <script type="text/javascript" src="../js/cc_info_validation.js"></script>
+    <script type="text/javascript" src="../js/checkout_cc.js"></script>
   </body>
 </html5>

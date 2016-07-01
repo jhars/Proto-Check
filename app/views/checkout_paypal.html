@@ -131,27 +131,36 @@
             <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
           </button>
         </div>
-        <span id="error-apply"></span>
+       <span id="error-apply"></span>
         <table>
           <tr>
             <td>Subtotal:</td>
-            <td class="amount">$65.00</td>
-          </tr
+            <td class="amount">$49.98</td>
+          </tr>
+          <tr id="discount-row">
+            <td>Discount</td>
+            <td class="amount" id="discount-amount">$19.99</td>
+          </tr>
           <tr>
             <td>Tax:</td>
             <td class="amount">$0.00</td>
           </tr>
           <tr>
             <td>Shipping:</td>
-            <td class="amount">$0.00</td>
+            <td class="amount">$5.99</td>
           </tr>
         </table>
         <hr>
         <table>
           <tr id="total-row">
             <td>Total:</td>
-            <td class="amount">$65.00</td>
+            <td class="amount">$56.97</td>
           </tr>
+          <tr id="total-row-applied">
+            <td>Total:</td>
+            <td class="amount">$36.98</td>
+          </tr>
+          <tr>
         </table>
         <br><br><br>
         <h6 class="section-title">Your Cart</h6>

@@ -106,9 +106,6 @@ $(document).ready(function () {
     checkAll(allFilled);
   });
 
-// errLabel
-// errMsgTop
-// errMsgTopSubHeader
   $.validator.addMethod("creditCard", function(value, element) {
     if (value === "4111") {
         console.log("value is 4111, Return True");
@@ -117,9 +114,9 @@ $(document).ready(function () {
         checkAll(allFilled);
         return true ;
     } else {
-        errMsgTop.show();
-        errMsgTopSubHeader.show();
-    	return false;
+        // errMsgTop.show();
+        // errMsgTopSubHeader.show();
+      return false;
     }
   }, "Sorry but your payment was declined br processor. PLease try another card or contact your card issuer. If this continues please contact support@thredup.com");
 
@@ -216,17 +213,17 @@ $(document).ready(function () {
   $('#input-form').validate({ // initialize the plugin
     debug: false,
     rules: {
-      cc:  					{ creditCard: true },
-      fname: 				{ firstName: true },
-      lname: 				{ lastName: true },
-      address: 			{ streetAddress: true },
-      zip_ship: 		{ shippingZipCode: true },
-      city: 				{ shippingCity: true },
-      state: 				{ shippingState: true },
-      exp_month:  	{ expirationMonth: true },
-      exp_year: 		{ expirationYear: true },
-      cvv: 					{ CVV: true },
-      zip_pay: 			{ billingZipCode: true },
+      cc:           { creditCard: true },
+      fname:        { firstName: true },
+      lname:        { lastName: true },
+      address:      { streetAddress: true },
+      zip_ship:     { shippingZipCode: true },
+      city:         { shippingCity: true },
+      state:        { shippingState: true },
+      exp_month:    { expirationMonth: true },
+      exp_year:     { expirationYear: true },
+      cvv:          { CVV: true },
+      zip_pay:      { billingZipCode: true },
       checkbox:     { checkBox: true }
     },
     errorPlacement: function(error, element) {
@@ -234,19 +231,35 @@ $(document).ready(function () {
       $("#error-msg-top").html("THERE IS A PROBLEM WITH YOUR ORDER");
       $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
     },
-		submitHandler: function(form) {
-    	// window.open("order_confirmation.html");
+    submitHandler: function(form) {
+      // window.open("order_confirmation.html");
       // window.location.replace("order_confirmation.html");
       // console.log(coupon.val())
-      if ((coupon.val() == "SUMMER") || !coupon.val() ) {
+      if ( ( (coupon.val() == "SUMMER") || !coupon.val() ) && cardNumber.val() == "4111" ) {
         document.location = './order_confirmation.html'
       }
       placeOrderBtnPushed();
     }
-	});
+  });
   function placeOrderBtnPushed() {
-    $('#error-apply').html("Please Enter a Valid Coupon");
+    creditCardPasses();
+    promoPasses();
     $("#error-msg-top").html("THERE IS A PROBLEM WITH YOUR ORDER");
     $("#error-msg-top-subheader").html("Looks like there is a problem with your payment Information");
+  }
+  function creditCardPasses() {
+    if (cardNumber.val() == "4111") {
+      return true
+    } else {
+      return false
+    }
+  }
+  function promoPasses() {
+    if ((coupon.val() == "SUMMER") || !coupon.val() || coupon.val() == "") {
+      return true
+    } else {
+      $('#error-apply').html("Please Enter a Valid Coupon");
+      return false
+    }
   }
 });

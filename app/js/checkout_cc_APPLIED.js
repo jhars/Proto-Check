@@ -13,8 +13,12 @@ var errLabel = $('#error-label');
 var errMsgTop = $("#error-msg-top");
 var errMsgTopSubHeader = $("#error-msg-top-subheader");
 
+var totalRow = $('#total-row');
+var totalRowApplied = $('#total-row-applied');
+
 $(window).load(function(){
-  // discountRow.hide();
+  totalRow.hide();
+  totalRowApplied.show();
   loadImages(sources, function(images) {
     ctxApplyImg.drawImage(images.applied, 0,0,108,37);
   });
@@ -24,15 +28,21 @@ function apply() {
   console.log("APLLYYYYYY");
   if (coupon.val() == "SUMMER") {
     ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+    $('#error-label').hide();
     discountRow.show();
-    $('#error-apply').hide();
+    totalRow.hide();
+    totalRowApplied.show();
   } else {
-    $('#error-apply').show();
+    totalRow.show();
+    discountRow.hide();
+    totalRowApplied.hide();
+    $('#error-label').show();
     $('#error-apply').html("Please enter valid coupon");
     ctxApplyImg.drawImage(images.apply, 0,0,108,37);
   }
   console.log("APLLIED");
 };
+
 
 var sources = {
   dress: "../img/thumb_dress.jpg",

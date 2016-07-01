@@ -1,29 +1,9 @@
-  function apply() {
-    console.log("APLLYYYYYY");
-    if (coupon.val() == "SUMMER") {
-      ctxApplyImg.drawImage(images.applied, 0,0,108,37);
-      discountRow.show();
-      $('#error-apply').hide();
-    } else {
-      $('#error-apply').show();
-      $('#error-apply').html("Please enter valid coupon");
-      ctxApplyImg.drawImage(images.apply, 0,0,108,37);
-    }
-    console.log("APLLIED");
-  };
-
-// ########################################################### //
-// ########################################################### //
-// $(document).ready(function () {
-
 	$('#promo-input').on('keyup', function(){
     ctxApplyImg.drawImage(images.apply, 0,0,108,37);
   });
 
 var applyImg = document.getElementById('apply-img'); var ctxApplyImg = applyImg.getContext('2d');
 
-// var applyBtn = document.getElementById('apply-img');
-// var ctxApply = applyBtn.getContext('2d');
 var coupon = $('#promo-input');
 var discountRow = $('#discount-row');
 
@@ -31,9 +11,51 @@ var errLabel = $('#error-label');
 var errMsgTop = $("#error-msg-top");
 var errMsgTopSubHeader = $("#error-msg-top-subheader");
 
+var totalRow = $('#total-row');
+var totalRowApplied = $('#total-row-applied');
+
+
+// function apply() {
+//   console.log("APLLYYYYYY");
+//   if (coupon.val() == "SUMMER") {
+//     ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+//     $('#error-label').hide();
+//     discountRow.show();
+//     totalRow.hide();
+//     totalRowApplied.show();
+//   } else {
+//     totalRow.show();
+//     discountRow.hide();
+//     totalRowApplied.hide();
+//     $('#error-label').show();
+//     $('#error-apply').html("Please enter valid coupon");
+//     ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+//   }
+//   console.log("APLLIED");
+// };
+function apply() {
+  console.log("APLLYYYYYY");
+  if (coupon.val() == "SUMMER") {
+    ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+    $('#error-label').hide();
+    discountRow.show();
+    totalRow.hide();
+    totalRowApplied.show();
+  } else {
+    totalRow.show();
+    discountRow.hide();
+    totalRowApplied.hide();
+    $('#error-label').show();
+    $('#error-apply').html("Please enter valid coupon");
+    ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+  }
+  console.log("APLLIED");
+};
+
+
 $(window).load(function(){
   console.log('load');
-
+  totalRow.hide();
   // discountRow.hide();
   // applyImg.show();
   // ctxApplyImg.drawImage(images.applied, 0,0,108,37);

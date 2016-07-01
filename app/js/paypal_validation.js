@@ -3,23 +3,22 @@
   // });
 
 
-  function apply() {
-    console.log("APLLYYYYYY");
-    if (coupon.val() == "SUMMER") {
-      ctxApplyImg.drawImage(images.applied, 0,0,108,37);
-      discountRow.show();
-      $('#error-apply').hide();
-    } else {
-      $('#error-apply').show();
-      $('#error-apply').html("Please enter valid coupon");
-      ctxApplyImg.drawImage(images.apply, 0,0,108,37);
-    }
-    console.log("APLLIED");
-  };
+  // function apply() {
+  //   console.log("APLLYYYYYY");
+  //   if (coupon.val() == "SUMMER") {
+  //     ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+  //     discountRow.show();
+  //     $('#error-apply').hide();
+  //   } else {
+  //     $('#error-apply').show();
+  //     $('#error-apply').html("Please enter valid coupon");
+  //     ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+  //   }
+  //   console.log("APLLIED");
+  // };
 
 // ########################################################### //
 // ########################################################### //
-// $(document).ready(function () {
 
 	$('#promo-input').on('keyup', function(){
     ctxApplyImg.drawImage(images.apply, 0,0,108,37);
@@ -32,13 +31,35 @@ var applyImg = document.getElementById('apply-img'); var ctxApplyImg = applyImg.
 var coupon = $('#promo-input');
 var discountRow = $('#discount-row');
 
+var totalRow = $('#total-row');
+var totalRowApplied = $('#total-row-applied');
+
 var errLabel = $('#error-label');
 var errMsgTop = $("#error-msg-top");
 var errMsgTopSubHeader = $("#error-msg-top-subheader");
 
+function apply() {
+  console.log("APLLYYYYYY");
+  if (coupon.val() == "SUMMER") {
+    ctxApplyImg.drawImage(images.applied, 0,0,108,37);
+    $('#error-label').hide();
+    discountRow.show();
+    totalRow.hide();
+    totalRowApplied.show();
+  } else {
+    totalRow.show();
+    discountRow.hide();
+    totalRowApplied.hide();
+    $('#error-label').show();
+    $('#error-apply').html("Please enter valid coupon");
+    ctxApplyImg.drawImage(images.apply, 0,0,108,37);
+  }
+  console.log("APLLIED");
+};
+
 $(window).load(function(){
   console.log('load');
-
+  totalRowApplied.hide();
   discountRow.hide();
   $('#checkout-btn').prop('disabled', false);
   checkAll(allFilled);

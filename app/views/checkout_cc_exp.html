@@ -13,14 +13,13 @@
   <div class="row">
     <a href="http://www.thredup.com"><img id="logo" src="../img/thredUP_logo.png"></a><hr>
   </div>
-
   <div class="container" id="main-container"><!-- ***********  START-CONTAINER  ********** -->
     <div id="error-msg-top"></div>
     <div id="error-msg-top-subheader"></div>
-    <!-- ********* ********  MASTER ROW   ******** ******** -->  
+    <!-- ********* ********  MASTER ROW   ******** ******** -->
     <div class="row" id="master-row">
       <form id="input-form">
-      <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
+      <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
         <div class="col-md-7" id="left-col">
           <!-- ********* INPUT-FORM ******** -->
           <h6 class="section-title">Shipping Info</h6>
@@ -29,11 +28,11 @@
           <div class="row">
             <div class="col-xs-6">
               <label class="custom-input-label">First Name</label><br>
-              <input type="text" class="name shipping-input" id="f-name" name="fname" value="Jane">
+              <input type="text" class="name shipping-input" id="f-name" name="fname" value="">
             </div>
             <div class="col-xs-6">
               <label class="custom-input-label">Last Name</label><br>
-              <input type="text" class="name shipping-input" id="l-name" name="lname" value="Dough">
+              <input type="text" class="name shipping-input" id="l-name" name="lname" value="">
             </div>
           </div>
 
@@ -41,29 +40,29 @@
           <div class="row" id="address-search">
             <div class="col-xs-12" id="locationField">
               <label class="custom-input-label">Street Address</label><br>
-              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address" value="114 Sansome Street, San Francisco, CA">
+              <input id="autocomplete" class="full-width shipping-input" placeholder="" onFocus="geolocate()" type="text" name="address" value="">
             </div>
           </div>
 
           <div class="row" id="row-apt">
             <div class="col-xs-12">
               <label class="custom-input-label">Apt #, Floor, etc. (optional)</label><br>
-              <input class="full-width shipping-input" type="text" id="sublocality" name="apt" value="5">
+              <input class="full-width shipping-input" type="text" id="sublocality" name="apt" value="">
             </div>
           </div>
 
           <div class="row">
             <div class="col-xs-3">
               <label class="custom-input-label">Zip</label><br>
-              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship" value="94117">
+              <input type="text" class= "shipping-input" id="postal_code" name="zip_ship" value="">
             </div>
             <div class="col-xs-7">
               <label class="custom-input-label">City</label><br>
-              <input type="text" class="shipping-input" id="locality" name="city" value="San Francisco">
+              <input type="text" class="shipping-input" id="locality" name="city" value="">
             </div>
             <div class="col-xs-2">
               <label class="custom-input-label">State</label><br>
-              <input type="select" id="administrative_area_level_1" name="state" value="CA">
+              <input type="select" id="administrative_area_level_1" name="state" value="">
             </div>
           </div>
           <br>
@@ -73,14 +72,14 @@
             <div class="control-group">
               <h7 id="shipping-info">Shipping Options (estimated):</h7><br>
               <div class="outer-shipping">
-                <label class="control control--radio">Standard 3-7 Business Days<br/>Should arrive between June 10-17
+                <label class="control control--radio">Standard 3-7 Business Days
                   <input type="radio" name="radio" checked="checked"/>
                   <div class="control__indicator"></div>
                 </label>
               </div>
 
               <div class="outer-shipping">
-                <label class="control control--radio">Expedited Shipping 1-3 Days <br/>Should arrive between June 5-6
+                <label class="control control--radio">Expedited Shipping 1-3 Days
                   <input class="check-radio" type="radio" name="radio"/>
                   <div class="control__indicator"></div>
                 </label>
@@ -90,25 +89,45 @@
           <br><br>
           <!-- ********* PAYMENT-FORM ******** -->
           <h6 class="section-title" id="payment-section">Payment Info</h6>
+          <p id="cc-input-helper">Please input your credit card information(info?)
+            <img id="cc-types" src="../img/cc_types.jpg">
+          </p>
+
           <div class="row" id="row-apt">
             <div class="col-xs-12">
-              <img id="paypal-info" src="../img/paypal_dropdown.png">
+              <label class="custom-input-label">Card Number</label><br>
+              <input class="full-width shipping-input" type="text" id="card-number" name="cc" value="">
             </div>
+          </div>
 
-            <div class="col-xs-12">
-              <div class="control-group">
-                <label class="control control--checkbox">Securely save the payment method for future purchases
-                  <input class="check-radio" type="checkbox" name="checksave" id="check-save" checked/>
-                  <div class="control__indicator check-radio"></div>
-                </label>
-              </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <label class="custom-input-label">Expiration</label><br>
+              <input type="text" name="exp_month" id="exp-month" class="payment-details-field shipping-input" placeholder="MM" size="4" value="">
+              <input type="text" name="exp_year" id="exp-year" class="payment-details-field shipping-input" placeholder="YY" size="4" value="">
+            </div>
+            <div class="col-xs-5">
+              <label class="custom-input-label">Security Code</label><br>
+              <input type="text" class="shipping-input" id="cvv" name="cvv" value="">
+            </div>
+            <div class="col-xs-4">
+              <label class="custom-input-label">Billing Zip Code</label><br>
+              <input type="select" class="shipping-input" id="zip-pay" name="zip_pay" value="">
             </div>
           </div>
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
+          <div class="control-group">
+            <label class="control control--checkbox">Securely save the payment method for future purchases
+              <input class="check-radio" type="checkbox" name="checksave" id="check-save" checked/>
+              <div class="control__indicator check-radio"></div>
+            </label>
+          </div>
 
-          <input type="submit" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" disabled/>
+          <input type="submit" alt="PLACE ORDER" id="checkout-btn" value="PLACE ORDER" onclick="validateCC()" disabled/>
+          <!-- <input type="image" alt="Submit" id="checkout-btn" src="../img/place_order_enabled.jpg" width="473" height="49"/> -->
+          <!-- <input type="image" alt="Submit" id="checkout-btn-disabled" src="../img/place_order_disabled.jpg" width="473" height="49" disabled/> -->
           <br>
           </form> <!-- =========== END FORM ============== -->
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** -->
@@ -122,13 +141,18 @@
       <div class="col-md-5" id="right-col">
     <!-- ********* ORDER-SUMMARY ******** -->
         <h6 class="section-title">Order Summary</h6>
-        <label class="custom-input-label">Promo</label>
-        <div class="flexContainer">
-          <input type="text" class="inputField" id="promo-input" name="promo_field" value="SUMMER">
-          <button id="apply-btn">
-            <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
-          </button>
-        </div>
+        <!-- <label class="custom-input-label">Promo</label> -->
+          <!-- PROMO FORM <form> -->
+          <!-- <form id="coupon-code-form"> -->
+            <label class="custom-input-label">Promo</label>
+            <div class="flexContainer">
+              <input type="text" class="inputField" id="promo-input" name="promo_field" >
+              <button id="apply-btn">
+                <canvas id="apply-img" width="108" height="37" onclick="apply()"></canvas>
+              </button>
+            </div>
+          <!-- PROMO FORM </form> -->
+          <!-- </form> -->
         <span id="error-apply"></span>
         <table>
           <tr>
@@ -159,6 +183,9 @@
             <td class="amount">$36.98</td>
           </tr>
           <tr>
+            <td></td>
+            <td class="amount">You're only <span id="amount-from-shipping">$22.03</span> away from <strong>FREE shipping</strong></td>
+          </tr>
         </table>
         <br><br><br>
         <h6 class="section-title">Your Cart</h6>
@@ -176,15 +203,11 @@
           </div>
         </div>
         </div><!-- ********* ORDER-SUMMARY (end) ********* -->
-
-
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
 <!-- ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** ********* ******** ******** -->  
       </div> <!-- right-col-END -->
-    </form> <!-- END PAGE FORM -->
-
-
-    </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** --> 
+    <!-- </form> END PAGE FORM -->
+    </div><!-- ********* END MASTER ROW  ********  END MASTER ROW   ******** ******** -->
   </div><!-- ***********  END-CONTAINER  ********** ***********  END-CONTAINER  **********  -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -193,9 +216,6 @@
     <!-- CUSTOM JS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6Crf0rk262MXl1tR4MXlNVsbiCtHrak&libraries=places&callback=initAutocomplete"async defer></script>
     <script type="text/javascript" src="../js/autocomplete.js"></script>
-    <!-- <script type="text/javascript" src="../js/payment_validation.js"></script> -->
-    <!-- <script type="text/javascript" src="../js/cc_info_validation.js"></script> -->
-    <!-- <script type="text/javascript" src="../js/amazon_info_validation.js"></script> -->
-    <script type="text/javascript" src="../js/paypal_validation_APPLIED.js"></script>
+    <script type="text/javascript" src="../js/checkout_cc_exp.js"></script>
   </body>
 </html5>
